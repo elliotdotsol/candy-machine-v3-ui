@@ -173,6 +173,16 @@ const MainContainer = styled.div`
   justify-content: center;
 `;
 
+const LeftContainer = styled.div`
+  width: 50%;
+  max-width: 50%;
+`;
+
+const RightContainer = styled.div`
+  width: 50%;
+  max-width: 50%;
+`;
+
 const Price = styled(Chip)`
   position: absolute;
   margin: 5px;
@@ -505,12 +515,12 @@ const Home = (props: HomeProps) => {
   return (
     <main>
       <MainContainer>
-        <h1>KindKoalas</h1>
-        <div><Price
-          label={isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " " + priceLabel) : (price + " " + priceLabel)} /><Image
-            src="cool-cats.gif"
-            alt="NFT To Mint" /></div>
-        <br />
+        <LeftContainer>
+          <Image src="cool-cats.gif" alt="NFT To Mint" />
+        </LeftContainer>
+        <RightContainer>
+          <h1>KindKoalas</h1>
+        <Price label={isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " " + priceLabel) : (price + " " + priceLabel)} />
         {wallet && isActive && whitelistEnabled && (whitelistTokenBalance > 0) && isBurnToken &&
           <h3>You own {whitelistTokenBalance} WL mint {whitelistTokenBalance > 1 ? "tokens" : "token"}.</h3>}
         {wallet && isActive && whitelistEnabled && (whitelistTokenBalance > 0) && !isBurnToken &&
@@ -588,6 +598,7 @@ const Home = (props: HomeProps) => {
         <br />
         {wallet && isActive && solanaExplorerLink &&
           <SolExplorerLink href={solanaExplorerLink} target="_blank">View on Solscan</SolExplorerLink>}
+          </RightContainer>
       </MainContainer>
       <Snackbar
         open={alertState.open}

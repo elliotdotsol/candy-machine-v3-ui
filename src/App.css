@@ -1,6 +1,6 @@
 /* Customize your main colors in :root variables */
 :root {
-  --main-background-color: #343A50;
+  --main-background-color: #121213;
   --card-background-color: #51576D;
   --card-background-lighter-color: #7A7F92;
   --main-text-color:#F7F6F4;
@@ -23,6 +23,3 @@ h2, p{
 h3{
 font-weight: normal;
 }
-
-
-

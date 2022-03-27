@@ -165,6 +165,7 @@ const SolExplorerLink = styled.a`
 const MainContainer = styled.div`
   display: flex;
   flex-direction: row;
+  max-width: 1300px;
 `;
 
 const LeftContainer = styled.div`

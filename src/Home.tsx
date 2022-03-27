@@ -69,19 +69,6 @@ const ConnectButton = styled(WalletMultiButton)`
   margin: 0 auto;
 `;
 
-const NFT = styled(Paper)`
-  min-width: 500px;
-  padding: 5px 20px 20px 20px;
-  flex: 1 1 auto;
-  background-color: var(--card-background-color) !important;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22) !important;
-`;
-
-const Des = styled(NFT)`
-  text-align: left;
-  padding-top: 0px;
-`;
-
 
 const Card = styled(Paper)`
   display: inline-block;
@@ -184,21 +171,6 @@ const MainContainer = styled.div`
   margin-left: 4%;
   text-align: center;
   justify-content: center;
-`;
-
-const MintContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex: 1 1 auto;
-  flex-wrap: wrap;
-  gap: 20px;
-`;
-
-const DesContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 auto;
-  gap: 20px;
 `;
 
 const Price = styled(Chip)`
@@ -535,9 +507,6 @@ const Home = (props: HomeProps) => {
             <MainContainer>
                 <h1>KindKoalas</h1>
                 <br/>
-                <MintContainer>
-                    <DesContainer>
-                        <NFT elevation={3}>
                             <h2>My NFT</h2>
                             <br/>
                             <div><Price
@@ -622,9 +591,6 @@ const Home = (props: HomeProps) => {
                             <br/>
                             {wallet && isActive && solanaExplorerLink &&
                               <SolExplorerLink href={solanaExplorerLink} target="_blank">View on Solscan</SolExplorerLink>}
-                        </NFT>
-                    </DesContainer>
-                </MintContainer>
             </MainContainer>
             <Snackbar
                 open={alertState.open}

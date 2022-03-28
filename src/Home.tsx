@@ -41,6 +41,10 @@ const IconContainer = styled.div`
   display: block;
 `;
 
+const InfoContainer = styled.div`
+  display: block;
+`;
+
 const SocialIcon = styled.img`
   font-size: 18px;
   `;
@@ -538,13 +542,15 @@ const Home = (props: HomeProps) => {
         </LeftContainer>
         <RightContainer>
           <MainTitle>KindKoalas</MainTitle>
-          <TotalItems>{itemsAvailable}</TotalItems>
-          <Price> {isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " " + priceLabel) : (price + " " + priceLabel)} </Price>
-          <IconContainer>
-            <a href="#" target="__blank"> <SocialIcon src="website.svg"></SocialIcon> </a>
-            <a href="#" target="__blank"> <SocialIcon src="discord.svg"></SocialIcon> </a>
-            <a href="#" target="__blank"> <SocialIcon src="twitter.svg"></SocialIcon> </a>
-          </IconContainer>
+          <InfoContainer>
+            <TotalItems>{itemsAvailable}</TotalItems>
+            <Price> {isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " " + priceLabel) : (price + " " + priceLabel)} </Price>
+            <IconContainer>
+              <a href="#" target="__blank"> <SocialIcon src="website.svg"></SocialIcon> </a>
+              <a href="#" target="__blank"> <SocialIcon src="discord.svg"></SocialIcon> </a>
+              <a href="#" target="__blank"> <SocialIcon src="twitter.svg"></SocialIcon> </a>
+            </IconContainer>
+          </InfoContainer>
           {wallet && isActive && whitelistEnabled && (whitelistTokenBalance > 0) && isBurnToken &&
             <h3>You own {whitelistTokenBalance} WL mint {whitelistTokenBalance > 1 ? "tokens" : "token"}.</h3>}
           {wallet && isActive && whitelistEnabled && (whitelistTokenBalance > 0) && !isBurnToken &&

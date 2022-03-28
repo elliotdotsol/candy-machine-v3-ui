@@ -189,7 +189,7 @@ const RightContainer = styled.div`
   text-align: left;
 `;
 
-const Price = styled.p)`
+const Price = styled.p`
   font-weight: 700;
   font-size: 16px !important;
   font-family: 'Poppins' !important;

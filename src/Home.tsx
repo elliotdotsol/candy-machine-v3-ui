@@ -39,10 +39,12 @@ const MainTitle = styled.h1`
 
 const IconContainer = styled.div`
   display: block;
+  margin-top: auto;
+  margin-bottom: auto;
 `;
 
 const InfoIcon = styled.img`
-  height: 25px;
+  height: 22px;
   margin: 0 8px;
   vertical-align: middle;
 `;
@@ -52,23 +54,25 @@ const InfoContainer = styled.div`
 `;
 
 const TotalItems = styled.p`
-  font-size: 18px;
+  font-size: 16px;
   font-family: 'Poppins';
   font-weight: 400;
   margin: 0 10px 0 0;
   border: 2px solid #fff;
   border-radius: 5px;
-  padding: 2px 20px;
+  padding: 3px 20px;
+  text-transform: uppercase;
 `;
 
 const Price = styled.p`
   font-weight: 400;
-  font-size: 18px !important;
+  font-size: 16px !important;
   font-family: 'Poppins' !important;
   margin: 0 10px 0 0;
-  border: 2px solid #fff;
+  border: 3px solid #fff;
   border-radius: 5px;
   padding: 2px 20px;
+  text-transform: uppercase;
 `;
 
 const WalletAmount = styled.div`

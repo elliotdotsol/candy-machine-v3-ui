@@ -42,8 +42,8 @@ const IconContainer = styled.div`
 `;
 
 const InfoIcon = styled.img`
-  height: 16px;
-  margin: 0 5px;
+  height: 25px;
+  margin: 0 8px;
   vertical-align: middle;
 `;
 
@@ -553,8 +553,8 @@ const Home = (props: HomeProps) => {
         <RightContainer>
           <MainTitle>KindKoalas</MainTitle>
           <InfoContainer>
-            <TotalItems>{itemsAvailable}</TotalItems>
-            <Price> {isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " " + priceLabel) : (price + " " + priceLabel)} </Price>
+            <TotalItems>Total Items {itemsAvailable}</TotalItems>
+            <Price>Price ◎ {isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " ") : (price + " ")} </Price>
             <IconContainer>
               <a href="#" target="__blank"> <InfoIcon src="website.png" /> </a>
               <a href="#" target="__blank"> <InfoIcon src="discord.png" /> </a>

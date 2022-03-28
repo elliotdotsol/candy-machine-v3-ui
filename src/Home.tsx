@@ -559,7 +559,7 @@ const Home = (props: HomeProps) => {
             <IconContainer>
               <a href="#" target="__blank"> <SocialIcon src="website.svg"></SocialIcon> </a>
               <a href="#" target="__blank"> <SocialIcon src="discord.svg"></SocialIcon> </a>
-              <a href="#" target="__blank"> <Twitter> </a>
+              <a href="#" target="__blank"> <Twitter /> </a>
             </IconContainer>
           </InfoContainer>
           {wallet && isActive && whitelistEnabled && (whitelistTokenBalance > 0) && isBurnToken &&

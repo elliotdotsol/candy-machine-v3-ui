@@ -35,7 +35,7 @@ const MainTitle = styled.h1`
   font-family: 'Raleway';
   font-style: italic;
   font-weight: 900;
-
+`;
 
 const WalletAmount = styled.div`
   color: black;
@@ -524,8 +524,8 @@ const Home = (props: HomeProps) => {
         </LeftContainer>
         <RightContainer>
           <MainTitle>KindKoalas</MainTitle>
-//          <Price {isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " " + priceLabel) : (price + " " + priceLabel)} />
-//          {wallet && isActive && whitelistEnabled && (whitelistTokenBalance > 0) && isBurnToken &&
+          <Price {isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " " + priceLabel) : (price + " " + priceLabel)} />
+          {wallet && isActive && whitelistEnabled && (whitelistTokenBalance > 0) && isBurnToken &&
             <h3>You own {whitelistTokenBalance} WL mint {whitelistTokenBalance > 1 ? "tokens" : "token"}.</h3>}
           {wallet && isActive && whitelistEnabled && (whitelistTokenBalance > 0) && !isBurnToken &&
             <h3>You are whitelisted and allowed to mint.</h3>}

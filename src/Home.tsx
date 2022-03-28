@@ -37,6 +37,14 @@ const MainTitle = styled.h1`
   font-weight: 900;
 `;
 
+const IconContainer = styled.div`
+  display: block;
+`;
+
+const SocialIcon = styled.img`
+  font-size: 18px;
+  `;
+
 const WalletAmount = styled.div`
   color: black;
   width: auto;
@@ -524,7 +532,13 @@ const Home = (props: HomeProps) => {
         </LeftContainer>
         <RightContainer>
           <MainTitle>KindKoalas</MainTitle>
+          <TotalItems>{itemsAvailable}</TotalItems>
           <Price> {isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " " + priceLabel) : (price + " " + priceLabel)} </Price>
+          <IconContainer>
+            <a href="#" target="__blank"> <SocialIcon src="website.svg"></SocialIcon> </a>
+            <a href="#" target="__blank"> <SocialIcon src="discord.svg"></SocialIcon> </a>
+            <a href="#" target="__blank"> <SocialIcon src="twitter.svg"></SocialIcon> </a>
+          </IconContainer>
           {wallet && isActive && whitelistEnabled && (whitelistTokenBalance > 0) && isBurnToken &&
             <h3>You own {whitelistTokenBalance} WL mint {whitelistTokenBalance > 1 ? "tokens" : "token"}.</h3>}
           {wallet && isActive && whitelistEnabled && (whitelistTokenBalance > 0) && !isBurnToken &&

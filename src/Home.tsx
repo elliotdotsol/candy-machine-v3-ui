@@ -219,6 +219,8 @@ const MainContainer = styled.div`
   max-width: 80%;
   margin-right: auto;
   margin-left: auto;
+  min-height: 100vh;
+  align-items: center;
 `;
 
 const LeftContainer = styled.div`

@@ -41,7 +41,7 @@ const IconContainer = styled.div`
   display: block;
 `;
 
-const InfoIcon = styled.a`
+const InfoIcon = styled.img`
   height: 23px;
 `;
 

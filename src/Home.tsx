@@ -53,6 +53,10 @@ const InfoContainer = styled.div`
   display: inline-flex;
 `;
 
+const IconLink = styled.a`
+  text-decoration: none;
+`;
+
 const TotalItems = styled.p`
   font-size: 16px;
   font-family: 'Poppins';
@@ -562,9 +566,9 @@ const Home = (props: HomeProps) => {
             <TotalItems>Total Items {itemsAvailable}</TotalItems>
             <Price>Price ◎ {isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " ") : (price + " ")} </Price>
             <IconContainer>
-              <a href="#" target="__blank"> <InfoIcon src="website.svg" /> </a>
-              <a href="#" target="__blank"> <InfoIcon src="discord.svg" /> </a>
-              <a href="#" target="__blank"> <InfoIcon src="twitter.svg" /> </a>
+              <IconLink href="#" target="__blank"> <InfoIcon src="website.svg" /> </IconLink>
+              <IconLink href="#" target="__blank"> <InfoIcon src="discord.svg" /> </IconLink>
+              <IconLink href="#" target="__blank"> <InfoIcon src="twitter.svg" /> </IconLink>
             </IconContainer>
           </InfoContainer>
           {wallet && isActive && whitelistEnabled && (whitelistTokenBalance > 0) && isBurnToken &&

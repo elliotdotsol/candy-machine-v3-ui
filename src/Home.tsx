@@ -560,9 +560,9 @@ const Home = (props: HomeProps) => {
             <TotalItems>Total Items {itemsAvailable}</TotalItems>
             <Price>Price ◎ {isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " ") : (price + " ")} </Price>
             <IconContainer>
-              <a href="#" target="__blank"> <InfoIcon src="website.png" /> </a>
-              <a href="#" target="__blank"> <InfoIcon src="discord.png" /> </a>
-              <a href="#" target="__blank"> <InfoIcon src="twitter.png" /> </a>
+              <a href="#" target="__blank"> <InfoIcon src="website.svg" /> </a>
+              <a href="#" target="__blank"> <InfoIcon src="discord.svg" /> </a>
+              <a href="#" target="__blank"> <InfoIcon src="twitter.svg" /> </a>
             </IconContainer>
           </InfoContainer>
           {wallet && isActive && whitelistEnabled && (whitelistTokenBalance > 0) && isBurnToken &&

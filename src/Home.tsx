@@ -62,6 +62,7 @@ const TotalItems = styled.p`
   border-radius: 5px;
   padding: 3px 20px;
   text-transform: uppercase;
+  line-height: 28px;
 `;
 
 const Price = styled.p`
@@ -73,6 +74,7 @@ const Price = styled.p`
   border-radius: 5px;
   padding: 3px 20px;
   text-transform: uppercase;
+  line-height: 28px;
 `;
 
 const WalletAmount = styled.div`

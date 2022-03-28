@@ -65,6 +65,11 @@ const IconContainer = styled.div`
   display: block;
 `;
 
+const InfoIcon = styled.a`
+  height: 16px;
+  color: #fff;
+`;
+
 const TwitterIcon = styled(Twitter)`
   height: 16px;
   color: #fff;
@@ -583,9 +588,9 @@ const Home = (props: HomeProps) => {
             <TotalItems>{itemsAvailable}</TotalItems>
             <Price> {isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " " + priceLabel) : (price + " " + priceLabel)} </Price>
             <IconContainer>
-              <a href="#" target="__blank"> <Website /> </a>
-              <a href="#" target="__blank"> <Discord /> </a>
-              <a href="#" target="__blank"> <Twitter /> </a>
+              <InfoIcon href="#" target="__blank"> <Website /> </InfoIcon>
+              <InfoIcon href="#" target="__blank"> <Discord /> </InfoIcon>
+              <InfoIcon href="#" target="__blank"> <Twitter /> </InfoIcon>
             </IconContainer>
           </InfoContainer>
           {wallet && isActive && whitelistEnabled && (whitelistTokenBalance > 0) && isBurnToken &&

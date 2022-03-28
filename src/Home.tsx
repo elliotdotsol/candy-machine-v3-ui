@@ -82,6 +82,13 @@ const Price = styled.p`
   line-height: 28px;
 `;
 
+const ProjectDescription = styled.p`
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 35px;
+  font-family: 'Montserrat', sans-serif;
+  color: #E0E0E0;
+
 const WalletAmount = styled.div`
   color: black;
   width: auto;
@@ -593,6 +600,7 @@ const Home = (props: HomeProps) => {
           {wallet && isActive && <BorderLinearProgress variant="determinate"
             value={100 - (itemsRemaining * 100 / itemsAvailable)} />}
           <br />
+          <ProjectDescription>The greatest hockey NFT collection on #Solana. 3333 packs hide 111 all-star players claimable as rare physical collectibles.</ProjectDescription>
           <MintButtonContainer>
             {!isActive && !isEnded && candyMachine ?.state.goLiveDate && (!isWLOnly || whitelistTokenBalance > 0) ? (
               <Countdown

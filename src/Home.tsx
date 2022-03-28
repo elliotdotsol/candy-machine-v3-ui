@@ -65,7 +65,7 @@ const IconContainer = styled.div`
   display: block;
 `;
 
-const Twitter = styled(twitter)`
+const TwitterIcon = styled(twitter)`
   height: 16px;
 `;
 

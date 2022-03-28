@@ -30,6 +30,13 @@ const WalletContainer = styled.div`
   justify-content: center;
 `;
 
+const MainTitle = styled.h1`
+  font-size: 66px;
+  font-family: 'Raleway';
+  font-style: italic;
+  font-weight: 900;
+
+
 const WalletAmount = styled.div`
   color: black;
   width: auto;
@@ -165,25 +172,27 @@ const SolExplorerLink = styled.a`
 const MainContainer = styled.div`
   display: flex;
   flex-direction: row;
-  max-width: 1300px;
+  max-width: 80%;
+  margin-right: auto;
+  margin-left: auto;
 `;
 
 const LeftContainer = styled.div`
   width: 50%;
   max-width: 50%;
+  text-align: center;
 `;
 
 const RightContainer = styled.div`
   width: 50%;
   max-width: 50%;
+  text-align: left;
 `;
 
-const Price = styled(Chip)`
-  position: absolute;
-  margin: 5px;
-  font-weight: bold;
-  font-size: 1.2em !important;
-  font-family: 'Patrick Hand', cursive !important;
+const Price = styled.p)`
+  font-weight: 700;
+  font-size: 16px !important;
+  font-family: 'Poppins' !important;
 `;
 
 const Image = styled.img`
@@ -514,7 +523,7 @@ const Home = (props: HomeProps) => {
           <Image src="cool-cats.gif" alt="NFT To Mint" />
         </LeftContainer>
         <RightContainer>
-          <h1>KindKoalas</h1>
+          <MainTitle>KindKoalas</MainTitle>
           <Price label={isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " " + priceLabel) : (price + " " + priceLabel)} />
           {wallet && isActive && whitelistEnabled && (whitelistTokenBalance > 0) && isBurnToken &&
             <h3>You own {whitelistTokenBalance} WL mint {whitelistTokenBalance > 1 ? "tokens" : "token"}.</h3>}

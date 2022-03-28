@@ -45,6 +45,12 @@ const SocialIcon = styled.img`
   font-size: 18px;
   `;
 
+const TotalItems = styled.p`
+  font-size: 16px;
+  font-family: 'Poppins';
+  font-weight: 400;
+`;
+
 const WalletAmount = styled.div`
   color: black;
   width: auto;

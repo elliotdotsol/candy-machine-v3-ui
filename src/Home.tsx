@@ -46,7 +46,7 @@ const IconContainer = styled.div`
 const InfoIcon = styled.img`
   height: 22px;
   margin: 0 8px;
-  vertical-align: middle;
+  vertical-align: top;
 `;
 
 const InfoContainer = styled.div`
@@ -69,9 +69,9 @@ const Price = styled.p`
   font-size: 16px !important;
   font-family: 'Poppins' !important;
   margin: 0 10px 0 0;
-  border: 3px solid #fff;
+  border: 2px solid #fff;
   border-radius: 5px;
-  padding: 2px 20px;
+  padding: 3px 20px;
   text-transform: uppercase;
 `;
 

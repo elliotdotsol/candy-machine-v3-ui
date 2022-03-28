@@ -67,6 +67,17 @@ const IconContainer = styled.div`
 
 const TwitterIcon = styled(Twitter)`
   height: 16px;
+  color: #fff;
+`;
+
+const DiscordIcon = styled(Discord)`
+  height: 16px;
+  color: #fff;
+`;
+
+const WebsiteIcon = styled(Website)`
+  height: 16px;
+  color: #fff;
 `;
 
 const InfoContainer = styled.div`

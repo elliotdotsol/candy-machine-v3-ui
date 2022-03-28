@@ -88,6 +88,7 @@ const ProjectDescription = styled.p`
   line-height: 35px;
   font-family: 'Montserrat', sans-serif;
   color: #E0E0E0;
+`;
 
 const WalletAmount = styled.div`
   color: black;

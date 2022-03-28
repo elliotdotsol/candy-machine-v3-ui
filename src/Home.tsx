@@ -35,7 +35,7 @@ const MainTitle = styled.h1`
   font-family: 'Raleway';
   font-style: italic;
   font-weight: 900;
-  margin: 0 0 10px 0;
+  margin: 0 0 15px 0;
 `;
 
 const IconContainer = styled.div`

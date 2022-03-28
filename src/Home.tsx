@@ -235,7 +235,7 @@ const MainContainer = styled.div`
 const LeftContainer = styled.div`
   width: 50%;
   max-width: 50%;
-  text-align: center;
+  text-align: left;
 `;
 
 const RightContainer = styled.div`
@@ -245,9 +245,9 @@ const RightContainer = styled.div`
 `;
 
 const Image = styled.img`
-  height: 400px;
+  height: 500px;
   width: auto;
-  border-radius: 7px;
+  border-radius: 10px;
   box-shadow: 5px 5px 40px 5px rgba(0,0,0,0.5);
 `;
 

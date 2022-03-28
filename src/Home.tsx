@@ -35,7 +35,7 @@ const MainTitle = styled.h1`
   font-family: 'Raleway';
   font-style: italic;
   font-weight: 900;
-  margin: 0;
+  margin: 0 0 10px 0;
 `;
 
 const IconContainer = styled.div`
@@ -84,8 +84,8 @@ const Price = styled.p`
 
 const ProjectDescription = styled.p`
   font-size: 18px;
-  font-weight: 500;
-  line-height: 35px;
+  font-weight: 400;
+  line-height: 40px;
   font-family: 'Montserrat', sans-serif;
   color: #E0E0E0;
 `;

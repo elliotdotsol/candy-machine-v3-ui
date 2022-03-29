@@ -162,6 +162,13 @@ const MintButtonContainer = styled.div`
     text-transform: uppercase !important;
     text-align: center !important;
   }
+  .MuiButton-label {
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .MuiButton-root {
+    padding: 18px !important;
+  }
 `;
 
 const Logo = styled.div`
@@ -250,20 +257,18 @@ const Image = styled.img`
 `;
 
 const BorderLinearProgress = styled(LinearProgress)`
-  margin: 20px;
   height: 10px !important;
   border-radius: 30px;
-  border: 2px solid white;
   box-shadow: 5px 5px 40px 5px rgba(0,0,0,0.5);
-  background-color:var(--main-text-color) !important;
+  background-color: #262626 !important;
 
   > div.MuiLinearProgress-barColorPrimary{
-    background-color:var(--title-text-color) !important;
+    background-color: #4E44CE !important;
   }
 
   > div.MuiLinearProgress-bar1Determinate {
     border-radius: 30px !important;
-    background-image: linear-gradient(270deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.5));
+    background-color: #4E44CE;
   }
 `;
 

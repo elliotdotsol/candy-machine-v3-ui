@@ -72,6 +72,7 @@
 
 @media screen and (max-width: 454px) {
   .nft-image {
+    margin-top: 10px;
     height: 100% !important;
     width: 95% !important;
     object-fit: cover !important;

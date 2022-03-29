@@ -49,7 +49,7 @@ const TotalMinted = styled.p`
 
 const WhitelistNotification = styled.p`
   margin: 15px 0 0 0;
-  font-size: 14px; 
+  font-size: 14px;
   color: #E0E0E0;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
@@ -599,7 +599,7 @@ const Home = (props: HomeProps) => {
               <IconLink className="infoIcon" href="#" target="__blank"> <InfoIcon src="twitter.svg" /> </IconLink>
             </IconContainer>
           </InfoContainer>
-          <ProjectDescription>The greatest hockey NFT collection on #Solana. 3333 packs hide 111 all-star players claimable as rare physical collectibles.</ProjectDescription>
+          <ProjectDescription>The kindest koalas on the block. Ready to live on our blockchain utilization platform that will reward all koalas with passive rewards in SOL.</ProjectDescription>
           <MintButtonContainer>
             {!isActive && !isEnded && candyMachine ?.state.goLiveDate && (!isWLOnly || whitelistTokenBalance > 0) ? (
               <Countdown

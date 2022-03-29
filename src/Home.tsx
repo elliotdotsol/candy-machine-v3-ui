@@ -38,6 +38,12 @@ const MainTitle = styled.h1`
   margin: 0 0 15px 0;
 `;
 
+const TotalMinted = styled.p`
+  font-size: 14px;
+  color: #E0E0E0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+
 const IconContainer = styled.div`
   display: block;
   margin-top: auto;
@@ -574,11 +580,6 @@ const Home = (props: HomeProps) => {
               }}
               renderer={renderEndDateCounter}
             />}
-          {wallet && isActive &&
-            <h3>TOTAL MINTED : {itemsRedeemed} / {itemsAvailable}</h3>}
-          {wallet && isActive && <BorderLinearProgress variant="determinate"
-            value={100 - (itemsRemaining * 100 / itemsAvailable)} />}
-          <br />
           <ProjectDescription>The greatest hockey NFT collection on #Solana. 3333 packs hide 111 all-star players claimable as rare physical collectibles.</ProjectDescription>
           <MintButtonContainer>
             {!isActive && !isEnded && candyMachine ?.state.goLiveDate && (!isWLOnly || whitelistTokenBalance > 0) ? (
@@ -635,6 +636,10 @@ const Home = (props: HomeProps) => {
                       <h1>Mint is private.</h1>
                                         )}
           </MintButtonContainer>
+          {wallet && isActive &&
+            <TotalMinted>TOTAL MINTED : {itemsRedeemed} / {itemsAvailable}</TotalMinted>}
+          {wallet && isActive && <BorderLinearProgress variant="determinate"
+            value={100 - (itemsRemaining * 100 / itemsAvailable)} />}
           <br />
           {wallet && isActive && solanaExplorerLink &&
             <SolExplorerLink href={solanaExplorerLink} target="_blank">View on Solscan</SolExplorerLink>}

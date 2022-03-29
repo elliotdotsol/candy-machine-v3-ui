@@ -43,6 +43,7 @@ const TotalMinted = styled.p`
   color: #E0E0E0;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
+`;
 
 const IconContainer = styled.div`
   display: block;

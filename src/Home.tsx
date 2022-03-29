@@ -11,6 +11,7 @@ import { Snackbar, Paper, LinearProgress, Chip } from "@material-ui/core";
 import Alert from "@material-ui/lab/Alert";
 import { toDate, AlertState, getAtaForMint } from './utils';
 import { MintButton } from './MintButton';
+import "./responsive.css";
 import {
   CandyMachine,
   awaitTransactionSignatureConfirmation,
@@ -256,11 +257,6 @@ const Image = styled.img`
   border-radius: 10px;
   box-shadow: 5px 5px 40px 5px rgba(0,0,0,0.5);
 
-  @media screen and (max-width: 1170px) {
-    .nft-image {
-      height: 400px !important;
-    }
-  }
 `;
 
 const BorderLinearProgress = styled(LinearProgress)`

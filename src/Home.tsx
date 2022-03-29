@@ -571,7 +571,7 @@ const Home = (props: HomeProps) => {
 
   return (
     <main>
-      <MainContainer>
+      <MainContainer className="maincontainer">
         <LeftContainer className="leftcontainer">
           <Image className="nft-image" src="kindkoalas-gif.gif" alt="Mint a Kind Koala" />
         </LeftContainer>

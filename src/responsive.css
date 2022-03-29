@@ -17,3 +17,17 @@
     max-width: 60% !important;
   }
 }
+
+@media screen and (max-width: 997px) {
+  .maincontainer {
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 997px) {
+  .rightcontainer, .leftcontainer {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+  }
+}

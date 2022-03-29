@@ -81,7 +81,7 @@ const TotalItems = styled.p`
 
 const Price = styled.p`
   font-weight: 400;
-  font-size: 16px !important;
+  font-size: 16px;
   font-family: 'Poppins' !important;
   margin: 0 10px 0 0;
   border: 2px solid #fff;

@@ -49,7 +49,7 @@ const TotalMinted = styled.p`
 
 const WhitelistNotification = styled.p`
   margin: 15px 0 0 0;
-  font-size: 14px;
+  font-size: 14px; 
   color: #E0E0E0;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;

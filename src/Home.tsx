@@ -656,7 +656,7 @@ const Home = (props: HomeProps) => {
                                         )}
           </MintButtonContainer>
           {wallet && isActive && whitelistEnabled && (whitelistTokenBalance > 0) && isBurnToken &&
-            <WhitelistNotification>You own {whitelistTokenBalance} WL mint {whitelistTokenBalance > 1 ? "tokens" : "token"}.</WhitelistNotification>}
+            <WhitelistNotification>You own <b>{whitelistTokenBalance}</b> WL mint {whitelistTokenBalance > 1 ? "tokens" : "token"}.</WhitelistNotification>}
           {wallet && isActive && whitelistEnabled && (whitelistTokenBalance > 0) && !isBurnToken &&
             <WhitelistNotification>You are whitelisted and allowed to mint.</WhitelistNotification>}
           {wallet && isActive &&

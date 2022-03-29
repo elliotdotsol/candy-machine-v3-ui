@@ -144,26 +144,7 @@ const Card = styled(Paper)`
 
 const MintButtonContainer = styled.div`
   button.MuiButton-contained:not(.MuiButton-containedPrimary).Mui-disabled {
-    color: #464646;
-  }
-
-  button.MuiButton-contained:not(.MuiButton-containedPrimary):hover,
-  button.MuiButton-contained:not(.MuiButton-containedPrimary):focus {
-    -webkit-animation: pulse 1s;
-    animation: pulse 1s;
-    box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
-  }
-
-  @-webkit-keyframes pulse {
-    0% {
-      box-shadow: 0 0 0 0 #ef8f6e;
-    }
-  }
-
-  @keyframes pulse {
-    0% {
-      box-shadow: 0 0 0 0 #ef8f6e;
-    }
+    color: #fff;
   }
 `;
 
@@ -268,10 +249,6 @@ const BorderLinearProgress = styled(LinearProgress)`
     border-radius: 30px !important;
     background-image: linear-gradient(270deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.5));
   }
-`;
-
-const GoldTitle = styled.h2`
-  color: var(--title-text-color);
 `;
 
 const LogoAligner = styled.div`

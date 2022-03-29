@@ -7,11 +7,11 @@ import {CandyMachine} from './candy-machine';
 
 
 export const CTAButton = styled(Button)`
-  display: block !important;
-  margin: 0 auto !important;
-  background-color: #4E44CE !important;
-  min-width: 120px !important;
-  font-size: 1em !important;
+  border-radius: 7px !important;
+  padding: 30px;
+  background-color: #4E44CE;
+  margin: 0 auto;
+  width: 100%;
 `;
 
 export const MintButton = ({

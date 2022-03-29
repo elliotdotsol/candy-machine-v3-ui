@@ -575,7 +575,7 @@ const Home = (props: HomeProps) => {
     <main>
       <MainContainer>
         <LeftContainer>
-          <Image class="nft-image" src="kindkoalas-gif.gif" alt="Mint a Kind Koala" />
+          <Image className="nft-image" src="kindkoalas-gif.gif" alt="Mint a Kind Koala" />
         </LeftContainer>
         <RightContainer>
           <MainTitle>KindKoalas</MainTitle>

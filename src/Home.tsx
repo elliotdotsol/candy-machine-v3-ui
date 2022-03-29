@@ -243,12 +243,14 @@ const LeftContainer = styled.div`
   width: 50%;
   max-width: 50%;
   text-align: left;
+  margin: 10px
 `;
 
 const RightContainer = styled.div`
   width: 50%;
   max-width: 50%;
   text-align: left;
+  margin: 10px;
 `;
 
 const Image = styled.img`
@@ -570,10 +572,10 @@ const Home = (props: HomeProps) => {
   return (
     <main>
       <MainContainer>
-        <LeftContainer>
+        <LeftContainer className="leftcontainer">
           <Image className="nft-image" src="kindkoalas-gif.gif" alt="Mint a Kind Koala" />
         </LeftContainer>
-        <RightContainer>
+        <RightContainer className="rightcontainer">
           <MainTitle>KindKoalas</MainTitle>
           <InfoContainer>
             <TotalItems>Total Items {itemsAvailable}</TotalItems>

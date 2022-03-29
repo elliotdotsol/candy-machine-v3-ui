@@ -1,5 +1,19 @@
 @media screen and (max-width: 1170px) {
   .nft-image {
-    height: 400px !important;
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 1170px) {
+  .leftcontainer {
+    width: 40%;
+    max-width: 40%;
+  }
+}
+
+@media screen and (max-width: 1170px) {
+  .rightcontainer {
+    width: 60%;
+    max-width: 60%;
   }
 }

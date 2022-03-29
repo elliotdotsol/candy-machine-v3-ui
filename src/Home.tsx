@@ -39,6 +39,7 @@ const MainTitle = styled.h1`
 `;
 
 const TotalMinted = styled.p`
+  margin-top: 25px;
   font-size: 14px;
   color: #E0E0E0;
   font-family: 'Montserrat', sans-serif;
@@ -154,11 +155,11 @@ const MintButtonContainer = styled.div`
     color: #fff;
   }
   .MuiButton-contained {
-    background-color: #29F19D !important;
+    background-color: #4E44CE !important;
     color: #fff !important;
     font-family: 'Montserrat', sans-serif !important;
     font-size: 18px !important;
-    font-weight: 800 !important;
+    font-weight: 500 !important;
     text-transform: uppercase !important;
     text-align: center !important;
   }

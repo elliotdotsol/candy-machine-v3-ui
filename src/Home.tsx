@@ -153,6 +153,15 @@ const MintButtonContainer = styled.div`
   button.MuiButton-contained:not(.MuiButton-containedPrimary).Mui-disabled {
     color: #fff;
   }
+  .MuiButton-contained {
+    background-color: #29F19D !important;
+    color: #fff !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 18px !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    text-align: center !important;
+  }
 `;
 
 const Logo = styled.div`

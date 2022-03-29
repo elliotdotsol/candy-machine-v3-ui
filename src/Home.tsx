@@ -123,10 +123,11 @@ const Wallet = styled.ul`
 `;
 
 const ConnectButton = styled(WalletMultiButton)`
-  border-radius: 18px !important;
-  padding: 6px 16px;
+  border-radius: 7px !important;
+  padding: 30px;
   background-color: #4E44CE;
   margin: 0 auto;
+  width: 100%;
 `;
 
 

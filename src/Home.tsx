@@ -583,8 +583,8 @@ const Home = (props: HomeProps) => {
         <RightContainer className="rightcontainer">
           <MainTitle className="maintitle">KindKoalas</MainTitle>
           <InfoContainer>
-            <TotalItems className="infoText">Total Items {itemsAvailable}</TotalItems>
-            <Price className="infoText">Price ◎ {isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " ") : (price + " ")} </Price>
+            <TotalItems className="totalitems">Total Items {itemsAvailable}</TotalItems>
+            <Price className="price">Price ◎ {isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " ") : (price + " ")} </Price>
             <IconContainer>
               <IconLink className="infoIcon" href="#" target="__blank"> <InfoIcon src="website.svg" /> </IconLink>
               <IconLink className="infoIcon" href="#" target="__blank"> <InfoIcon src="discord.svg" /> </IconLink>

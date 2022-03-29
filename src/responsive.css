@@ -57,7 +57,7 @@
 }
 
 @media screen and (max-width: 454px) {
-  .infoText {
+  .totalitems, .price {
     font-size: 12px !important;
     padding: 3px 8px !important
   }

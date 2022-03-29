@@ -39,3 +39,12 @@
     margin-bottom: 50px !important
   }
 }
+
+@media screen and (max-width: 578px) {
+  .rightcontainer, .leftcontainer {
+    width: 95% !important;
+    max-width: 95% !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+}

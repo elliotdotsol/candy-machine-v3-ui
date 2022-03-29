@@ -47,6 +47,14 @@ const TotalMinted = styled.p`
   font-weight: 400;
 `;
 
+const WhitelistNotification = styled.p`
+  margin: 15px 0 0 0;
+  font-size: 14px;
+  color: #E0E0E0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+`;
+
 const IconContainer = styled.div`
   display: block;
   margin-top: auto;
@@ -591,20 +599,6 @@ const Home = (props: HomeProps) => {
               <IconLink className="infoIcon" href="#" target="__blank"> <InfoIcon src="twitter.svg" /> </IconLink>
             </IconContainer>
           </InfoContainer>
-          {wallet && isActive && whitelistEnabled && (whitelistTokenBalance > 0) && isBurnToken &&
-            <h3>You own {whitelistTokenBalance} WL mint {whitelistTokenBalance > 1 ? "tokens" : "token"}.</h3>}
-          {wallet && isActive && whitelistEnabled && (whitelistTokenBalance > 0) && !isBurnToken &&
-            <h3>You are whitelisted and allowed to mint.</h3>}
-
-          {wallet && isActive && endDate && Date.now() < endDate.getTime() &&
-            <Countdown
-              date={toDate(candyMachine ?.state ?.endSettings ?.number)}
-              onMount={({ completed }) => completed && setIsEnded(true)}
-              onComplete={() => {
-                setIsEnded(true);
-              }}
-              renderer={renderEndDateCounter}
-            />}
           <ProjectDescription>The greatest hockey NFT collection on #Solana. 3333 packs hide 111 all-star players claimable as rare physical collectibles.</ProjectDescription>
           <MintButtonContainer>
             {!isActive && !isEnded && candyMachine ?.state.goLiveDate && (!isWLOnly || whitelistTokenBalance > 0) ? (
@@ -661,6 +655,10 @@ const Home = (props: HomeProps) => {
                       <h1>Mint is private.</h1>
                                         )}
           </MintButtonContainer>
+          {wallet && isActive && whitelistEnabled && (whitelistTokenBalance > 0) && isBurnToken &&
+            <WhitelistNotification>You own {whitelistTokenBalance} WL mint {whitelistTokenBalance > 1 ? "tokens" : "token"}.</WhitelistNotification>}
+          {wallet && isActive && whitelistEnabled && (whitelistTokenBalance > 0) && !isBurnToken &&
+            <WhitelistNotification>You are whitelisted and allowed to mint.</WhitelistNotification>}
           {wallet && isActive &&
             <TotalMinted>TOTAL MINTED : {itemsRedeemed} / {itemsAvailable}</TotalMinted>}
           {wallet && isActive && <BorderLinearProgress variant="determinate"

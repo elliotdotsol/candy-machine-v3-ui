@@ -137,6 +137,11 @@ const ConnectButton = styled(WalletMultiButton)`
   background-color: #4E44CE;
   margin: 0 auto;
   width: 100%;
+  font-family: Montserrat, sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  text-align: center !important;
 `;
 
 

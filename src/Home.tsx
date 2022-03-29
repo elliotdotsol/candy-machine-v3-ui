@@ -231,7 +231,7 @@ const SolExplorerLink = styled.a`
 const MainContainer = styled.div`
   display: flex;
   flex-direction: row;
-  max-width: 80%;
+  max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
   min-height: 100vh;
@@ -255,6 +255,12 @@ const Image = styled.img`
   width: auto;
   border-radius: 10px;
   box-shadow: 5px 5px 40px 5px rgba(0,0,0,0.5);
+
+  @media screen and (max-width: 1170px) {
+    .nft-image {
+      height: 400px !important;
+    }
+  }
 `;
 
 const BorderLinearProgress = styled(LinearProgress)`
@@ -569,7 +575,7 @@ const Home = (props: HomeProps) => {
     <main>
       <MainContainer>
         <LeftContainer>
-          <Image src="kindkoalas-gif.gif" alt="Mint a Kind Koala" />
+          <Image class="nft-image" src="kindkoalas-gif.gif" alt="Mint a Kind Koala" />
         </LeftContainer>
         <RightContainer>
           <MainTitle>KindKoalas</MainTitle>

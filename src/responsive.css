@@ -20,14 +20,22 @@
 
 @media screen and (max-width: 997px) {
   .maincontainer {
-    display: block !important;
+    flex-direction: column !important;
+    justify-content: center;
   }
 }
 
 @media screen and (max-width: 997px) {
   .rightcontainer, .leftcontainer {
-    width: 100% !important;
-    max-width: 100% !important;
+    width: 75% !important;
+    max-width: 75% !important;
     text-align: center !important;
+    margin: 0 auto !important;
+  }
+}
+
+@media screen and (max-width: 997px) {
+  .nft-image {
+    margin-bottom: 50px !important
   }
 }

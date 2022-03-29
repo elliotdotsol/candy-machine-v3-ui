@@ -581,14 +581,14 @@ const Home = (props: HomeProps) => {
           <Image className="nft-image" src="kindkoalas-gif.gif" alt="Mint a Kind Koala" />
         </LeftContainer>
         <RightContainer className="rightcontainer">
-          <MainTitle>KindKoalas</MainTitle>
+          <MainTitle className="maintitle">KindKoalas</MainTitle>
           <InfoContainer>
-            <TotalItems>Total Items {itemsAvailable}</TotalItems>
-            <Price>Price ◎ {isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " ") : (price + " ")} </Price>
+            <TotalItems className="infoText">Total Items {itemsAvailable}</TotalItems>
+            <Price className="infoText">Price ◎ {isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " ") : (price + " ")} </Price>
             <IconContainer>
-              <IconLink href="#" target="__blank"> <InfoIcon src="website.svg" /> </IconLink>
-              <IconLink href="#" target="__blank"> <InfoIcon src="discord.svg" /> </IconLink>
-              <IconLink href="#" target="__blank"> <InfoIcon src="twitter.svg" /> </IconLink>
+              <IconLink className="infoIcon" href="#" target="__blank"> <InfoIcon src="website.svg" /> </IconLink>
+              <IconLink className="infoIcon" href="#" target="__blank"> <InfoIcon src="discord.svg" /> </IconLink>
+              <IconLink className="infoIcon" href="#" target="__blank"> <InfoIcon src="twitter.svg" /> </IconLink>
             </IconContainer>
           </InfoContainer>
           {wallet && isActive && whitelistEnabled && (whitelistTokenBalance > 0) && isBurnToken &&

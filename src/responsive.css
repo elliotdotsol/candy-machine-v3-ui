@@ -48,3 +48,24 @@
     margin: 0 auto !important;
   }
 }
+
+@media screen and (max-width: 454px) {
+  .maintitle {
+    font-size: 40px !important;
+    font-weight: 800 !important;
+  }
+}
+
+@media screen and (max-width: 454px) {
+  .infoText {
+    font-size: 14px !important;
+    padding: 3px 10px !important
+  }
+}
+
+@media screen and (max-width: 454px) {
+  .infoIcon {
+    height: 18px !important;
+    vertical-align: middle !important;
+  }
+}

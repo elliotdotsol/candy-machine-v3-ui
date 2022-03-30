@@ -586,10 +586,10 @@ const Home = (props: HomeProps) => {
     <main>
       <MainContainer className="maincontainer">
         <LeftContainer className="leftcontainer">
-          <Image className="nft-image" src="kindkoalas-gif.gif" alt="Mint a Kind Koala" />
+          <Image className="nft-image" src="yourimagehere.png" alt="Mint a YOURNFT" />
         </LeftContainer>
         <RightContainer className="rightcontainer">
-          <MainTitle className="maintitle">KindKoalas</MainTitle>
+          <MainTitle className="maintitle">Your NFT Name</MainTitle>
           <InfoContainer>
             <TotalItems className="totalitems">Total Items {itemsAvailable}</TotalItems>
             <Price className="price">Price ◎ {isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " ") : (price + " ")} </Price>
@@ -599,7 +599,7 @@ const Home = (props: HomeProps) => {
               <IconLink className="infoIcon" href="#" target="__blank"> <InfoIcon src="twitter.svg" /> </IconLink>
             </IconContainer>
           </InfoContainer>
-          <ProjectDescription>The kindest koalas on the block. Ready to live on our blockchain utilization platform that will reward all koalas with passive rewards in SOL.</ProjectDescription>
+          <ProjectDescription>This front-end for Candy Machine V2 was made possible by Zaab Studio. Free to use & public to copy for everyone!</ProjectDescription>
           <MintButtonContainer>
             {!isActive && !isEnded && candyMachine ?.state.goLiveDate && (!isWLOnly || whitelistTokenBalance > 0) ? (
               <Countdown

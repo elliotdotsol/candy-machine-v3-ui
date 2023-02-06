@@ -1,77 +1,30 @@
-# Candy Machine v3 UI Introduction
-Hi! This is a production ready **Candy Machine V3** responsive UI which can be easily customized.
-Major features of the CMv3 such as Candy Guards are implemented & auto-detected.
+# Introduction
 
-### Preview
-![Desktop preview of Candy Machine V3](https://cdn.discordapp.com/attachments/1039648022516215919/1072170298398474250/cmv3.png)
-— Desktop preview.
+Hi! This is a production ready **Candy Machine V2** responsive UI which can easily be customized.
+Major features of the CMv2 are implemented & auto-detected. This includes:
 
+<<<<<<< HEAD
 Preview it live [here](https://candy-machine-zaab-ui.vercel.app/).
+=======
+ - Public mint (with countdown when date in future)
+ - Civic support
+ - Whitelist (with SPL-token to mint)
+ - Presale (with automatic mint price update)
+ - Collection size (automatically grabs collection size and imports the number)
+ - All major wallets (phantom, solflare, slope, sollet, ledger, and more)
+>>>>>>> parent of 7be6d99 (v3 update)
 
-### Deploy with Vercel *(recommended)*
-Vercel is great to host your Candy Machine on, deploy it instantly by clicking the button below.
+# Preview
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fzaabstudio%2Fzaab-candy-machine-v3&env=NEXT_PUBLIC_SOLANA_NETWORK,NEXT_PUBLIC_RPC_HOST,NEXT_PUBLIC_CANDY_MACHINE_ID&project-name=my-zaab-cmv3&repository-name=my-zaab-cmv3)
+![Desktop Preview](https://cdn.discordapp.com/attachments/946021913120079953/958463798602264646/candy-machine-zaab-ui-ue42.vercel.app_.png)
+Desktop preview, preview live [here](https://candy-machine-zaab-ui.vercel.app/)
 
-### Implemented features
-- [x] Responsive UI
-- [x] Single Mint UI
-- [x] Multi Mint UI
-- [x] Start Time Countdown
-- [x] Preview Minted NFTs
-- [x] Guards Supported
-  - [x] Start Date
-  - [x] End Date
-  - [x] Sol Payment
-  - [x] Token Payment
-  - [x] Mint Limit
-  - [x] Bot Tax
-  - [x] Token Burn
-  - [x] Token Gate
-  - [x] NFT Payment
-  - [x] NFT Burn
-  - [x] NFT Gate
-  - [x] Redeemed Amount
-  - [x] Address Gate
-  - [x] Allow List
-  - [x] Gatekeeper
 
-### Multi Group 
-*For Multi-group functionality use cmv3-demo-initialization branch*
+## Deploy instantly to Vercel
 
-### Env Variables
-```
-NEXT_PUBLIC_SOLANA_NETWORK=mainnet/devnet
-```
-```
-NEXT_PUBLIC_RPC_HOST=networkURL
-```
-```
-NEXT_PUBLIC_CANDY_MACHINE_ID=candyMachineID
-```
+Vercel is great to host your Candy Machine on, you can deploy instantly to Vercel by clicking the button below and filling in the **Environment Variables** (regularly in your .env file).
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fcrazyrick4%2Fcandy-machine-zaab-ui.git&env=REACT_APP_CANDY_MACHINE_ID,REACT_APP_SOLANA_NETWORK,REACT_APP_SOLANA_RPC_HOST)
 
-### Quick customization
-Want to customize the color scheme? This frontend uses 6 main colors that can be found in [globals.css](/styles/globals.css) change these values and the changes will apply globally.
-```
-:root {
-  --main-background-color: #0E0E0E;
-  --alt-background-color: #202020;
-  --white: #fff;
-  --black: #000;
-  --primary: #4E44CE;
-  --error: #D92D20;
-}
-```
+## Credits
 
-### Credits
-Thanks to [Solana Studio](https://github.com/Solana-Studio) for creating the original frontend. This repo is an addition onto theirs with more frontend features and dynamic functions.
-
-### Preview alternative Candy Machine states
-![Candy Machine V3 with Start Date](https://media.discordapp.net/attachments/1039648022516215919/1072171560288399440/startdatecmv3.png)
-— Candy Machine V3 with Start Date
-
-![Candy Machine V3 with Address Gate, Allow List or other similar guards](https://cdn.discordapp.com/attachments/1039648022516215919/1072171559520833656/privatecmv3.png)
-— Candy Machine V3 with Address Gate, Allow List or other similar guards
-
-## Feedback/Collaborating/Support
-If you have any feedback, want to collaborate or need support, please reach out to us at hello@zaab.studio
+Thanks to BloodSpilll#9625 (Discord) for creating the original UI, which this repo is forked from. Also thanks to [Stractors](https://www.youtube.com/channel/UCf-oH3TIq8xHVtVogrpTm7g) for creating informative videos on Metaplex & Solana Development.

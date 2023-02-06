@@ -1,0 +1,80 @@
+@media screen and (max-width: 1170px) {
+  .nft-image {
+    height: 400px !important;
+  }
+}
+
+@media screen and (max-width: 1170px) {
+  .leftcontainer {
+    width: 40% !important;
+    max-width: 40% !important;
+  }
+}
+
+@media screen and (max-width: 1170px) {
+  .rightcontainer {
+    width: 60% !important;
+    max-width: 60% !important;
+  }
+}
+
+@media screen and (max-width: 997px) {
+  .maincontainer {
+    flex-direction: column !important;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 997px) {
+  .rightcontainer, .leftcontainer {
+    width: 75% !important;
+    max-width: 75% !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+}
+
+@media screen and (max-width: 997px) {
+  .nft-image {
+    margin-bottom: 50px !important
+  }
+}
+
+@media screen and (max-width: 578px) {
+  .rightcontainer, .leftcontainer {
+    width: 95% !important;
+    max-width: 95% !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+}
+
+@media screen and (max-width: 454px) {
+  .maintitle {
+    font-size: 40px !important;
+    font-weight: 800 !important;
+  }
+}
+
+@media screen and (max-width: 454px) {
+  .totalitems, .price {
+    font-size: 12px !important;
+    padding: 3px 8px !important
+  }
+}
+
+@media screen and (max-width: 454px) {
+  .infoIcon {
+    height: 18px !important;
+    vertical-align: middle !important;
+  }
+}
+
+@media screen and (max-width: 454px) {
+  .nft-image {
+    margin-top: 10px;
+    height: 100% !important;
+    width: 95% !important;
+    object-fit: cover !important;
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "short_name": "Zaab CM",
+  "name": "Zaab Responsive Candy Machine",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "type": "image/png",
+      "sizes": "524x524"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

@@ -6,7 +6,7 @@ Major features of the CMv3 such as Candy Guards are implemented & auto-detected.
 ![Desktop preview of Candy Machine V3](https://cdn.discordapp.com/attachments/1039648022516215919/1072170298398474250/cmv3.png)
 — Desktop preview.
 
-Preview it live [here](https://zaab-candy-machine-v3.vercel.app/).
+Preview it live [here](https://candy-machine-zaab-ui.vercel.app/).
 
 ### Deploy with Vercel *(recommended)*
 Vercel is great to host your Candy Machine on, deploy it instantly by clicking the button below.

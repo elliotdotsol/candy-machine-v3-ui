@@ -11,7 +11,7 @@ Preview it live [here](https://candy-machine-zaab-ui.vercel.app/).
 ### Deploy with Vercel *(recommended)*
 Vercel is great to host your Candy Machine on, deploy it instantly by clicking the button below.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fzaabstudio%2Fzaab-candy-machine-v3&env=NEXT_PUBLIC_SOLANA_NETWORK,NEXT_PUBLIC_RPC_HOST,NEXT_PUBLIC_CANDY_MACHINE_ID&project-name=my-zaab-cmv3&repository-name=my-zaab-cmv3)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fzaabstudio%2Fcandy-machine-zaab-ui&env=NEXT_PUBLIC_SOLANA_NETWORK,NEXT_PUBLIC_RPC_HOST,NEXT_PUBLIC_CANDY_MACHINE_ID&project-name=my-zaab-cmv3&repository-name=my-zaab-cmv3)
 
 ### Implemented features
 - [x] Responsive UI

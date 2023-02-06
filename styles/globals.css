@@ -1,0 +1,57 @@
+/* Need to change colors? Do it here, these are the main colors that are used all over the website */
+:root {
+  --main-background-color: #0E0E0E;
+  --alt-background-color: #202020;
+  --white: #fff;
+  --black: #000;
+  --primary: #4E44CE;
+  --error: #D92D20;
+}
+
+/* Font: Plus Jakarta Sans is being loaded here from Google Fonts and is used all over the website */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+body {
+  background-color: var(--main-background-color);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1rem;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--black);
+  color: var(--white);
+}
+main {
+  overflow: hidden;
+}
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+.w-100 {
+  width: 100%;
+}
+
+/* Modal that opens when the 'Connect Wallet' button is clicked styling */
+.wallet-adapter-modal-wrapper {
+  background-color: var(--alt-background-color) !important;
+}
+.wallet-adapter-button {
+  color: var(--black) !important;
+  background-color: var(--white) !important;
+  transition: 0.2s !important;
+}
+.wallet-adapter-button:hover {
+  background-color: var(--white) !important;
+  opacity: 0.9 !important;
+  color: var(--black) !important;
+}
+.wallet-adapter-modal-list {
+  margin: 0 0 4px !important;
+}
+.wallet-adapter-modal-list li:not(:first-of-type) {
+  margin-top: 4px !important;
+}
+.wallet-adapter-modal-title {
+  color: var(----white) !important;
+}

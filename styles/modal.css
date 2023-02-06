@@ -108,7 +108,7 @@
     gap: 0px !important;
 }
 .MuiChip-label {
-    overflow: auto !important;
+    overflow: visible !important;
     padding: 0 !important;
 }
 .MuiDialogActions-root {

@@ -6,12 +6,12 @@ Major features of the CMv3 such as Candy Guards are implemented & auto-detected.
 ![Desktop preview of Candy Machine V3](https://cdn.discordapp.com/attachments/1039648022516215919/1072170298398474250/cmv3.png)
 — Desktop preview.
 
-Preview it live [here](https://candy-machine-zaab-ui.vercel.app/).
+Preview it live [here](https://candy-machine-kite-ui.vercel.app/).
 
 ### Deploy with Vercel *(recommended)*
 Vercel is great to host your Candy Machine on, deploy it instantly by clicking the button below.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fzaabstudio%2Fcandy-machine-zaab-ui&env=NEXT_PUBLIC_SOLANA_NETWORK,NEXT_PUBLIC_RPC_HOST,NEXT_PUBLIC_CANDY_MACHINE_ID&project-name=my-zaab-cmv3&repository-name=my-zaab-cmv3)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwearekite%2Fcandy-machine-kite-ui&env=NEXT_PUBLIC_SOLANA_NETWORK,NEXT_PUBLIC_RPC_HOST,NEXT_PUBLIC_CANDY_MACHINE_ID&project-name=my-kite-cmv3&repository-name=my-kite-cmv3)
 
 ### Implemented features
 - [x] Responsive UI
@@ -74,4 +74,4 @@ Thanks to [Solana Studio](https://github.com/Solana-Studio) for creating the ori
 — Candy Machine V3 with Address Gate, Allow List or other similar guards
 
 ## Feedback/Collaborating/Support
-If you have any feedback, want to collaborate or need support, please reach out to us at hello@zaab.studio
+If you have any feedback, want to collaborate or need support, please reach out to us at hello@kite.studio

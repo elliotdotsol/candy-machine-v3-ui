@@ -40,6 +40,7 @@ Vercel is great to host your Candy Machine on, deploy it instantly by clicking t
 *For Multi-group functionality use cmv3-demo-initialization branch*
 
 ### Env Variables
+*If on Vercel or a similar host you need to add these as environmental variables in your project settings.*
 ```
 NEXT_PUBLIC_SOLANA_NETWORK=mainnet/devnet
 ```

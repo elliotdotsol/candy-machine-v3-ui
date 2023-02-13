@@ -40,7 +40,6 @@ Vercel is great to host your Candy Machine on, deploy it instantly by clicking t
 *For Multi-group functionality use cmv3-demo-initialization branch*
 
 ### Env Variables
-*If on Vercel or a similar host you need to add these as environmental variables in your project settings.*
 ```
 NEXT_PUBLIC_SOLANA_NETWORK=mainnet/devnet
 ```
@@ -50,6 +49,7 @@ NEXT_PUBLIC_RPC_HOST=networkURL
 ```
 NEXT_PUBLIC_CANDY_MACHINE_ID=candyMachineID
 ```
+*If on Vercel or a similar host you need to add these as environmental variables in your project settings.*
 
 ### Quick customization
 Want to customize the color scheme? This frontend uses 6 main colors that can be found in [globals.css](/styles/globals.css) change these values and the changes will apply globally.
@@ -64,15 +64,15 @@ Want to customize the color scheme? This frontend uses 6 main colors that can be
 }
 ```
 
-### Credits
-Thanks to [Solana Studio](https://github.com/Solana-Studio) for creating the original frontend. This repo is an addition onto theirs with more frontend features and dynamic functions.
-
 ### Preview alternative Candy Machine states
 ![Candy Machine V3 with Start Date](https://media.discordapp.net/attachments/1039648022516215919/1072171560288399440/startdatecmv3.png)
 — Candy Machine V3 with Start Date
 
 ![Candy Machine V3 with Address Gate, Allow List or other similar guards](https://cdn.discordapp.com/attachments/1039648022516215919/1072171559520833656/privatecmv3.png)
 — Candy Machine V3 with Address Gate, Allow List or other similar guards
+
+### Credits
+Thanks to [Solana Studio](https://github.com/Solana-Studio) for creating the original frontend. This repo is an addition onto theirs with more frontend features and dynamic functions.
 
 ## Feedback/Collaborating/Support
 If you have any feedback, want to collaborate or need support, please reach out to us at hello@kite.studio

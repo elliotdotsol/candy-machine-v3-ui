@@ -94,7 +94,8 @@ const Other = styled.div`
 const ImageWrap = styled.div`
   aspect-ratio: 1 / 1;
   width: 100%;
-  background-image: url(https://images.pexels.com/photos/2832432/pexels-photo-2832432.png);
+  background-image: url(https://raw.githubusercontent.com/sidhubasho/lotto75/main/collection.png);
+  background-size:cover;
   border-radius: 16px;
 `
 const Image = styled.div`
@@ -598,11 +599,11 @@ const Home = (props: HomeProps) => {
             </Column>
             <Column>
               <Content>
-                <CollectionName>Collection Name</CollectionName>
+                <CollectionName>RT01</CollectionName>
                 <InfoRow>
                 {guardStates.isStarted && wallet.publicKey && (
                   <InfoBox>
-                    <p>Total items</p>
+                    <p>Total NFTs</p>
                     <p>{candyMachineV3.items.available}{" "}</p>
                   </InfoBox>
                 )} {guardStates.isStarted && wallet.publicKey && (
@@ -612,12 +613,12 @@ const Home = (props: HomeProps) => {
                   </InfoBox>
                 )}
                   <IconRow>
-                    <a href="#" target="_blank" rel="noopener noreferrer"><Globe></Globe></a>
-                    <a href="#" target="_blank" rel="noopener noreferrer"><Twitter></Twitter></a>
-                    <a href="#" target="_blank" rel="noopener noreferrer"><Discord></Discord></a>
+                    <a href="https://75lotto.netlify.app" target="_blank" rel="noopener noreferrer"><Globe></Globe></a>
+                    <a href="https://twitter.com/75lotto" target="_blank" rel="noopener noreferrer"><Twitter></Twitter></a>
+                    <a href="https://discord.gg/5m7fXKdjJm" target="_blank" rel="noopener noreferrer"><Discord></Discord></a>
                   </IconRow>
                 </InfoRow>
-                <CollectionDescription>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</CollectionDescription>
+                <CollectionDescription>Join the decentralized thrill and stake your claim, with 75 Lotto's NFT giveaway game. 100 chances to win, but only one takes it all - 75 SOL to their wallet, ready to rise and never fall.</CollectionDescription>
               </Content>
               <Other>
                 {!guardStates.isStarted ? (

@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Wave 1",
+    "description": "Only whitelisted",
+    "groups": [
+      {
+        "label": "waoed"
+      }
+    ]
+  },
+  {
+    "title": "Wave 2",
+    "description": "Pay to mint",
+    "groups": [
+      {
+        "label": "tknPmt",
+        "description": "You can only mint buy paying the specific token"
+      },
+      {
+        "label": "nftPmt",
+        "description": "You can only mint buy paying the specific nft"
+      }
+    ]
+  },
+  {
+    "title": "Wave 3",
+    "description": "Available for all",
+    "groups": [
+      {
+        "label": "public"
+      }
+    ]
+  }
+]

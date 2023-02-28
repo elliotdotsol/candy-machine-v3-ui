@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Section = styled('div')<any>`
   width: calc(100% - 64px);
-  height: calc(100vh - 192px);
+  min-height: calc(100vh - 192px);
   padding: 96px 0;
 
   @media only screen and (max-width: 768px) {
@@ -12,7 +12,7 @@ export const Section = styled('div')<any>`
 
   @media only screen and (max-width: 450px) {
     width:auto;
-    padding: 32px 0;
+    padding: 128px 0 32px 0;
   }
 `
 export const Container = styled('div')<any>`

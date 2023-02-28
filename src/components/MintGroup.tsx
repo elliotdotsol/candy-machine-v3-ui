@@ -1,7 +1,6 @@
 import { useConnection, useWallet } from "@solana/wallet-adapter-react";
 import { PublicKey } from "@solana/web3.js";
 import React from "react";
-import Countdown from "react-countdown";
 import { CandyMachineV3, NftPaymentMintSettings } from "../hooks/types";
 import { MultiMintButton } from "../MultiMintButton";
 import { MintGroupMetadata } from "./types";
@@ -10,6 +9,14 @@ import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import { Paper } from "@material-ui/core";
 import { GatewayProvider } from "@civic/solana-gateway-react";
 
+
+const MintedByYou = styled.span`
+  font-style: italic;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  text-transform: none;
+`
 const ConnectButton = styled(WalletMultiButton)`
   border-radius: 5px !important;
   padding: 6px 16px;
@@ -28,26 +35,79 @@ const Card = styled(Paper)`
     margin: 0px;
   }
 `;
-
-const renderGoLiveDateCounter = ({ days, hours, minutes, seconds }: any) => {
-  return (
-    <div>
-      <Card elevation={1}>
-        <h1>{days}</h1>Days
-      </Card>
-      <Card elevation={1}>
-        <h1>{hours}</h1>
-        Hours
-      </Card>
-      <Card elevation={1}>
-        <h1>{minutes}</h1>Mins
-      </Card>
-      <Card elevation={1}>
-        <h1>{seconds}</h1>Secs
-      </Card>
-    </div>
-  );
-};
+const MintGroupWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;  
+  width: 100%;
+`
+const MintGroupItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px;
+  gap: 32px; 
+  border: 2px solid rgba(78, 68, 206, 0.25);
+  border-radius: 8px; 
+  width: 100%;
+`
+const MintGroupTop = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 10px;
+  width: 100%;
+`
+const MintGroupTitle = styled.h2`
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: var(--white);
+`
+const MintGroupDescription = styled.p`
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  color: var(--white);
+`
+const MintGroupHeader = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 10px;
+  width: 100%;
+`
+const MintTimer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 4px;
+`
+const TimerItem = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 4px 7px;
+  gap: 10px;
+  background: rgba(78, 68, 206, 0.25);
+  border-radius: 4px;
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: var(--white);
+  min-width: 25px;
+  min-height: 23px;
+`
 
 export default function MintGroup({
   mintGroup,
@@ -67,20 +127,20 @@ export default function MintGroup({
         {},
       guardStates: candyMachineV3.guardStates[mintGroup.label] ||
         candyMachineV3.guardStates.default || {
-          isStarted: true,
-          isEnded: false,
-          isLimitReached: false,
-          canPayFor: 10,
-          messages: [],
-          isWalletWhitelisted: true,
-          hasGatekeeper: false,
-        },
+        isStarted: true,
+        isEnded: false,
+        isLimitReached: false,
+        canPayFor: 10,
+        messages: [],
+        isWalletWhitelisted: true,
+        hasGatekeeper: false,
+      },
       prices: candyMachineV3.prices[mintGroup.label] ||
         candyMachineV3.prices.default || {
-          payment: [],
-          burn: [],
-          gate: [],
-        },
+        payment: [],
+        burn: [],
+        gate: [],
+      },
     }),
     [
       mintGroup,
@@ -98,18 +158,18 @@ export default function MintGroup({
           return {
             burn: guards.burn?.nfts?.length
               ? {
-                  mint: guards.burn.nfts[i]?.mintAddress,
-                }
+                mint: guards.burn.nfts[i]?.mintAddress,
+              }
               : undefined,
             payment: guards.payment?.nfts?.length
               ? {
-                  mint: guards.payment.nfts[i]?.mintAddress,
-                }
+                mint: guards.payment.nfts[i]?.mintAddress,
+              }
               : undefined,
             gate: guards.gate?.nfts?.length
               ? {
-                  mint: guards.gate.nfts[i]?.mintAddress,
-                }
+                mint: guards.gate.nfts[i]?.mintAddress,
+              }
               : undefined,
           };
         });
@@ -146,7 +206,7 @@ export default function MintGroup({
       candyMachine={candyMachineV3.candyMachine}
       gatekeeperNetwork={gatekeeperNetwork}
       isMinting={candyMachineV3.status.minting}
-      setIsMinting={() => {}}
+      setIsMinting={() => { }}
       isActive={!!candyMachineV3.items.remaining}
       isEnded={guardStates.isEnded}
       isSoldOut={!candyMachineV3.items.remaining}
@@ -157,50 +217,44 @@ export default function MintGroup({
   );
 
   return (
-    <div style={{ borderTop: "1px solid black", paddingTop: "5px" }}>
-      {mintGroup.title ? <h3>{mintGroup.title}</h3> : null}
-      {mintGroup.description ? <p>{mintGroup.description}</p> : null}
-
-      {!guardStates.isStarted ? (
-        <Countdown
-          date={guards.startTime}
-          renderer={renderGoLiveDateCounter}
-          onComplete={() => {
-            candyMachineV3.refresh();
-          }}
-        />
-      ) : !wallet?.publicKey ? (
+    <div>
+      {!guardStates.isEnded && !guards.startTime ? (
+        <MintGroupTop>
+   {!wallet?.publicKey ? (
         <ConnectButton>Connect Wallet</ConnectButton>
       ) : // ) : !guardStates.canPayFor ? (
-      //   <h1>You cannot pay for the mint</h1>
-      !guardStates.isWalletWhitelisted ? (
-        <h1>Mint is private.</h1>
-      ) : (
-        <>
+        //   <h1>You cannot pay for the mint</h1>
+        !guardStates.isWalletWhitelisted ? (
+          <h1>Mint is private.</h1>
+        ) : (
           <>
-            {!!candyMachineV3.items.remaining &&
-            guardStates.hasGatekeeper &&
-            wallet.publicKey &&
-            wallet.signTransaction ? (
-              <GatewayProvider
-                wallet={{
-                  publicKey: wallet.publicKey,
-                  //@ts-ignore
-                  signTransaction: wallet.signTransaction,
-                }}
-                gatekeeperNetwork={guards.gatekeeperNetwork}
-                clusterUrl={connection.rpcEndpoint}
-                cluster={process.env.NEXT_PUBLIC_SOLANA_NETWORK || "devnet"}
-                options={{ autoShowModal: false }}
-              >
-                <MintButton gatekeeperNetwork={guards.gatekeeperNetwork} />
-              </GatewayProvider>
-            ) : (
-              <MintButton />
-            )}
+            <>
+              {!!candyMachineV3.items.remaining &&
+                guardStates.hasGatekeeper &&
+                wallet.publicKey &&
+                wallet.signTransaction ? (
+                <GatewayProvider
+                  wallet={{
+                    publicKey: wallet.publicKey,
+                    //@ts-ignore
+                    signTransaction: wallet.signTransaction,
+                  }}
+                  gatekeeperNetwork={guards.gatekeeperNetwork}
+                  clusterUrl={connection.rpcEndpoint}
+                  cluster={process.env.NEXT_PUBLIC_SOLANA_NETWORK || "devnet"}
+                  options={{ autoShowModal: false }}
+                > 
+                  <MintButton gatekeeperNetwork={guards.gatekeeperNetwork} />
+                </GatewayProvider>
+              ) : (
+                <MintButton />
+              )}
+            </>
           </>
-        </>
-      )}
+        )}
+    </MintGroupTop>
+      ) : null}
+    
     </div>
   );
 }

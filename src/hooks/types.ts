@@ -36,10 +36,10 @@ export type TokenPayment$Gate = {
 //   decimals: number;
 // };
 
-// export type NftPayment = {
-//   type: "nft";
-//   nfts: Metadata[];
-// };
+ export type NftPayment = {
+   type: "nft";
+   nfts: Metadata[];
+  };
 
 // export type PaymentGuard = {
 //   criteria: "pay" | "have";

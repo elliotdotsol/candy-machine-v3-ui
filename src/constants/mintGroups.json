@@ -19,16 +19,6 @@
     ]
   },
   {
-    "title": "Wl",
-    "description": "Only users with the whitelist token can mint.",
-    "groups": [
-      {
-        "label": "Wl",
-        "description": "You can only mint buy aying the specific token"
-      }
-    ]
-  },
-  {
     "title": "Public",
     "description": "Only selected wallets can mint.",
     "groups": [

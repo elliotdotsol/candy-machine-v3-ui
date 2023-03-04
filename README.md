@@ -39,7 +39,7 @@ Vercel is great to host your Candy Machine on, deploy it instantly by clicking t
 ### Multi Group 
 *For Multi-group functionality use [multi-group](https://github.com/wearekite/candy-machine-v3-ui/tree/multi-group) branch*
 
-![Desktop preview of Multi Group Functionality](https://media.discordapp.net/attachments/621055440268165121/1080220611982401598/Mint_Groups.png)
+![Desktop preview of Multi Group Functionality](https://media.discordapp.net/attachments/869952469516570694/1081582904582357094/multi-mint-groups.png)
 — Desktop preview of multi group functionality.
 
 *(PS: For optimal use, limit active/ongoing groups to 1 - button will be added automatically for each active group)*

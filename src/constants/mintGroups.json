@@ -10,17 +10,16 @@
   },
   {
     "title": "Wl",
-    "description": "Only users with the whitelist token can mint.",
+    "description": "Only users who are whitelisted can mint.",
     "groups": [
       {
-        "label": "Wl",
-        "description": "You can only mint buy aying the specific token"
+        "label": "Wl"
       }
     ]
   },
   {
     "title": "Public",
-    "description": "Only selected wallets can mint.",
+    "description": "Everyone can mint, no limit.",
     "groups": [
       {
         "label": "Public"

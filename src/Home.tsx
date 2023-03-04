@@ -664,7 +664,19 @@ const Home = (props: HomeProps) => {
               </Content>
               <Other>
 
-                <MintGroupWrap className="mintGroupWrap" >
+              {!wallet?.publicKey ? (
+                  <ConnectWallet>Connect Wallet</ConnectWallet>
+                  // ) : !guardStates.canPayFor ? (
+                  //   <h1>You cannot pay for the mint</h1>
+                ) : !guardStates.isWalletWhitelisted ? (
+                  <PrivateWrap>
+                    <PrivateText>Mint is private</PrivateText>
+                    <PrivateSubtext>You’re currently not allowed to mint. Try again at a later time.</PrivateSubtext>
+                  </PrivateWrap>
+                ) : null}
+
+              {guardStates.isStarted && wallet.publicKey && (
+                <MintGroupWrap className="mintGroupWrap">
                   {mintGroups.map((x, key) => (
                         <MintGroupItem key={key} >
                           <MintGroupTop>
@@ -680,9 +692,8 @@ const Home = (props: HomeProps) => {
                             <MintGroupFooter mintGroup={y} key={k} candyMachineV3={candyMachineV3} />
                           ))}
                         </MintGroupItem>
-                  ))}
-                </MintGroupWrap>
-
+                  ))} 
+                </MintGroupWrap> )}
                 <NftsModal
                   openOnSolscan={openOnSolscan}
                   mintedItems={mintedItems || []}
@@ -698,6 +709,7 @@ const Home = (props: HomeProps) => {
                   </Image>
                 </ImageWrap>
 
+                {guardStates.isStarted && wallet.publicKey && (
                 <div>
                   {mintGroups.map((x, key) => (
                     <div>
@@ -706,20 +718,7 @@ const Home = (props: HomeProps) => {
                       ))}
                     </div>
                   ))}
-                </div>
-
-
-
-                {!wallet?.publicKey ? (
-                  <ConnectWallet>Connect Wallet</ConnectWallet>
-                  // ) : !guardStates.canPayFor ? (
-                  //   <h1>You cannot pay for the mint</h1>
-                ) : !guardStates.isWalletWhitelisted ? (
-                  <PrivateWrap>
-                    <PrivateText>Mint is private</PrivateText>
-                    <PrivateSubtext>You’re currently not allowed to mint. Try again at a later time.</PrivateSubtext>
-                  </PrivateWrap>
-                ) : null}
+                </div> )}
 
                 <ProgressbarWrap>
                   {guardStates.isStarted && wallet.publicKey && (

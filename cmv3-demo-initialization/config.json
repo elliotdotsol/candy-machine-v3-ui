@@ -1,0 +1,14 @@
+{
+  "number": 300,
+  "symbol": "F00K",
+  "sellerFeeBasisPoints": 500,
+  "isMutable": true,
+  "isSequential": false,
+  "creators": [
+    {
+      "address": "5PCFZP3pNXxYwWrr84qxm9UMpbmVq7Mi8PM5QKBeQxKQ",
+      "share": 100
+    }
+  ],
+  "uploadMethod": "bundlr"
+}

@@ -1,0 +1,39 @@
+{
+  "name": "zaab-cmv3",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@civic/solana-gateway-react": "^0.11.0",
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.60",
+    "@metaplex-foundation/js": "^0.17.5",
+    "@metaplex-foundation/mpl-candy-guard": "^0.2.0",
+    "@solana/spl-token": "^0.3.6",
+    "@solana/wallet-adapter-base": "^0.9.18",
+    "@solana/wallet-adapter-react": "^0.15.20",
+    "@solana/wallet-adapter-react-ui": "^0.9.18",
+    "@solana/wallet-adapter-wallets": "^0.19.5",
+    "@solana/web3.js": "^1.66.2",
+    "canvas-confetti": "^1.4.0",
+    "next": "12.3.1",
+    "react": "18.2.0",
+    "react-countdown": "^2.3.2",
+    "react-dom": "18.2.0",
+    "styled-components": "^5.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^12.0.0",
+    "@types/react": "^18.0.22",
+    "@types/react-dom": "^18.0.7",
+    "eslint": "8.26.0",
+    "eslint-config-next": "12.3.1",
+    "typescript": "4.8.4"
+  }
+}

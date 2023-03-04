@@ -1,0 +1,121 @@
+/* All the styling for the modal that contains the NFT info the user minted */
+.MuiBackdrop-root {
+    background-color: rgba(0,0,0,0.75) !important;
+}
+.MuiDialog-paperWidthMd {
+    max-width: 1080px !important;
+}
+.MuiPaper-rounded {
+    border-radius: 16px !important;
+}
+.MuiPaper-root {
+    background-color: var(--alt-background-color) !important;
+}
+.MuiDialogTitle-root {
+    padding: 0px !important;
+    box-shadow: none !important;
+    border-bottom: none !important;
+}
+.MuiTypography-h6 {
+    font-family: 'Plus Jakarta Sans' !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    font-size: 32px !important;
+    line-height: 100% !important;
+    color: var(--white) !important;
+}
+.MuiPaper-elevation1 {
+    box-shadow: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 32px !important;
+}
+.MuiGrid-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 0px !important;
+    gap: 16px !important;    
+}
+.MuiCardMedia-img {
+    border-radius: 8px !important;
+}
+.MuiCardContent-root {
+    padding: 0 !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    padding: 0px !important;
+    gap: 8px !important;
+    flex-wrap: wrap !important;
+}
+.MuiTypography-h5 {
+    font-family: 'Plus Jakarta Sans' !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    font-size: 24px !important;
+    line-height: 100% !important;
+    color: var(--white) !important;    
+}
+.MuiTypography-colorTextSecondary {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+.MuiTypography-body2 {
+    font-size: 14px !important;
+    font-family: 'Plus Jakarta Sans' !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    line-height: 150% !important;
+}
+.MuiChip-root {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    flex-wrap: wrap !important;
+    padding: 0px !important;
+    gap: 12px !important;
+    font-family: 'Plus Jakarta Sans' !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    font-size: 12px !important;
+    line-height: 100% !important;
+    color: var(--white) !important;
+    margin: 0 !important;
+    text-transform: capitalize !important;
+}
+.MuiChip-outlined {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    padding: 8px 14px 10px !important;
+    gap: 10px !important;
+    background: rgba(78, 68, 206, 0.1) !important;
+    border: 1px solid var(--primary) !important;
+    border-radius: 150px !important;    
+}
+.MuiCardActionArea-root {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 0px !important;
+    gap: 16px !important;    
+}
+.MuiCardActions-root {
+    padding: 8px 0 !important;
+}
+.MuiDialog-paperScrollPaper {
+    gap: 0px !important;
+}
+.MuiChip-label {
+    overflow: visible !important;
+    padding: 0 !important;
+}
+.MuiDialogActions-root {
+    padding: 32px !important;
+    border-bottom: 2px solid rgba(0,0,0,0.25);
+    justify-content: space-between !important;
+}
+.MuiDialogContent-root {
+    padding: 32px !important;
+}

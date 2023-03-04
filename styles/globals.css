@@ -55,3 +55,17 @@ h1, h2, h3, h4, h5, h6, p {
 .wallet-adapter-modal-title {
   color: var(----white) !important;
 }
+
+/* Mint groups overflow styling */
+.mintGroupWrap::-webkit-scrollbar {
+  width: 6px;
+}
+.mintGroupWrap::-webkit-scrollbar-track {
+  border-radius: 100px;
+  background-color: var(--alt-background-color);
+  padding: 4px;
+}
+.mintGroupWrap::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 100px;
+}

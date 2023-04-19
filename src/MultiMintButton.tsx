@@ -344,7 +344,7 @@ export const MultiMintButton = ({
             mintCount > limit ? (
               "LIMIT REACHED"
             ) : isMinting || loading ? (
-              <CircularProgress />
+              "PLEASE WAIT, MINT IN PROGRESS"
             ) : (
               "MINT"
             )

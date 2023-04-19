@@ -1,9 +1,9 @@
-import { MintCounter } from "@metaplex-foundation/mpl-candy-guard";
+import { MintCounterArgs } from "@metaplex-foundation/mpl-candy-guard";
 import { deserialize } from "borsh";
 
-export class MintCounterBorsh implements MintCounter {
+export class MintCounterBorsh implements MintCounterArgs {
   count: number;
-  constructor(args: MintCounter) {
+  constructor(args: MintCounterArgs) {
     Object.assign(this, args);
   }
   static schema = new Map([

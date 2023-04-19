@@ -24,7 +24,11 @@ import {
   AllowLists,
   CustomCandyGuardMintSettings,
   GuardGroup,
+  GuardGroups,
   GuardGroupStates,
+  GuardMerkles,
+  GuardPrices,
+  GuardStates,
   NftPaymentMintSettings,
   ParsedPricesForUI,
   Token,
@@ -45,10 +49,7 @@ export default function useCandyMachineV3(
 ) {
   const { connection } = useConnection();
   const wallet = useWallet();
-  const [guardsAndGroups, setGuardsAndGroups] = React.useState<{
-    default?: GuardGroup;
-    [k: string]: GuardGroup;
-  }>({});
+  const [guardsAndGroups, setGuardsAndGroups] = React.useState<GuardGroups>({});
 
   const [status, setStatus] = React.useState({
     candyMachine: false,
@@ -97,17 +98,16 @@ export default function useCandyMachineV3(
         },
       };
     }
-    const merkles: { [k: string]: { tree: MerkleTree; proof: Uint8Array[] } } =
-      candyMachineOpts.allowLists.reduce(
-        (prev, { groupLabel, list }) =>
-          Object.assign(prev, {
-            [groupLabel]: {
-              tree: getMerkleTree(list),
-              proof: getMerkleProof(list, wallet.publicKey.toString()),
-            },
-          }),
-        {}
-      );
+    const merkles: GuardMerkles = candyMachineOpts.allowLists.reduce(
+      (prev, { groupLabel, list }) =>
+        Object.assign(prev, {
+          [groupLabel]: {
+            tree: getMerkleTree(list),
+            proof: getMerkleProof(list, wallet.publicKey.toString()),
+          },
+        }),
+      {}
+    );
     const verifyProof = (
       merkleRoot: Uint8Array | string,
       label = "default"
@@ -377,10 +377,7 @@ export default function useCandyMachineV3(
     })();
   }, [wallet.publicKey, nftHoldings, proofMemo, candyMachine]);
 
-  const prices = React.useMemo((): {
-    default?: ParsedPricesForUI;
-    [k: string]: ParsedPricesForUI;
-  } => {
+  const prices = React.useMemo((): GuardPrices => {
     // if (!status.initialFetchGuardGroupsDone) return {};
     // const prices = {
     // };
@@ -395,10 +392,7 @@ export default function useCandyMachineV3(
     );
   }, [guardsAndGroups]);
 
-  const guardStates = React.useMemo((): {
-    default?: GuardGroupStates;
-    [k: string]: GuardGroupStates;
-  } => {
+  const guardStates = React.useMemo((): GuardStates => {
     return Object.entries(guardsAndGroups).reduce(
       (groupPayments, [label, guards]) =>
         Object.assign(groupPayments, {

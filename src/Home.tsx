@@ -12,13 +12,6 @@ import { useEffect, useMemo, useState } from "react";
 import styled from "styled-components";
 import { GatewayProvider } from "@civic/solana-gateway-react";
 import { defaultGuardGroup, network } from "./config";
-
-// Mint groups
-import MintGroup from "./components/MintGroup";
-import MintTimer from "./components/MintTimer";
-import MintGroupFooter from "./components/MintGroupFooter";
-import mintGroups from "./constants/mintGroups.json";
-
 import { MultiMintButton } from "./MultiMintButton";
 //import { MintButton } from "./MintButton";
 import {
@@ -37,6 +30,13 @@ import {
   ParsedPricesForUI,
 } from "./hooks/types";
 import { guardToLimitUtil } from "./hooks/utils";
+
+// Mint groups
+import MintGroup from "./components/MintGroup";
+import MintTimer from "./components/MintTimer";
+import MintGroupFooter from "./components/MintGroupFooter";
+import mintGroups from "./constants/mintGroups.json";
+
 
 const BorderLinearProgress = styled(LinearProgress)`
   height: 16px !important;

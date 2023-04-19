@@ -226,7 +226,7 @@ export default function useCandyMachineV3(
         let signedTransactions = transactions;
 
         for (let signer in signers) {
-          await signers[signer].signAllTransactions(transactions);
+          signedTransactions = await signers[signer].signAllTransactions(transactions);
         }
         if (allowList) {
           const allowListCallGuardRouteTx = signedTransactions.shift();

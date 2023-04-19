@@ -712,7 +712,7 @@ const Home = (props: HomeProps) => {
                 {guardStates.isStarted && wallet.publicKey && (
                 <div>
                   {mintGroups.map((x, key) => (
-                    <div>
+                    <div key={key}>
                       {x.groups.map((y, k) => (
                         <MintGroup mintGroup={y} key={k} candyMachineV3={candyMachineV3} />
                       ))}

@@ -76,8 +76,5 @@ Want to customize the color scheme? This frontend uses 6 main colors that can be
 ![Candy Machine V3 with Address Gate, Allow List or other similar guards](https://cdn.discordapp.com/attachments/1039648022516215919/1072171559520833656/privatecmv3.png)
 — Candy Machine V3 with Address Gate, Allow List or other similar guards
 
-### Credits
-Thanks to [Solana Studio](https://github.com/Solana-Studio) for creating the original frontend. This repo is an addition onto theirs with more frontend features and dynamic functions.
-
 ## Feedback/Collaborating/Support
-If you have any feedback, want to collaborate or need support, please reach out to us at hello@kite.studio
+If you have any feedback, want to collaborate or need support, please submit an issue through [Github Issues](https://github.com/wearekite/candy-machine-v3-ui/issues).

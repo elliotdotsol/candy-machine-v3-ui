@@ -7,6 +7,7 @@ import { useConnection, useWallet } from "@solana/wallet-adapter-react";
 import { PublicKey } from "@solana/web3.js";
 import { GatewayStatus, useGateway } from "@civic/solana-gateway-react";
 import { GuardGroupStates, ParsedPricesForUI, PaymentRequired } from "./hooks/types";
+import { tokenType } from "./config";
 
 // Icons
 const MinusIcon = (props) => (
@@ -55,7 +56,6 @@ export const CTAButton = styled.button`
   color: var(--white);
   cursor: pointer;
   border: none;
-  font-family: 'Plus Jakarta Sans';
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -73,7 +73,6 @@ export const ButtonWrap = styled.div`
   align-items: center;
   color: var(--white);
   border: none;
-  font-family: 'Plus Jakarta Sans';
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -118,7 +117,6 @@ export const NumericField = styled.input`
   background-color: none;
   box-sizing: border-box;
   background: none;
-  font-family: 'Plus Jakarta Sans';
   font-weight: 600;
   line-height: 100%;
   height: 20px;
@@ -143,7 +141,6 @@ export const NumericField = styled.input`
   }
 `;
 export const EstimatedCost = styled.p`
-  font-family: 'Plus Jakarta Sans';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -231,7 +228,7 @@ export const MultiMintButton = ({
   }, [mintCount, prices]);
   const totalTokenCostsString = useMemo(() => {
     return totalTokenCosts.reduce(
-      (text, price) => `${text} + ${price.price} ${price.label}`,
+      (text, price) => `${text} + ${price.price} ${tokenType}`,
       ""
     );
   }, [totalTokenCosts]);

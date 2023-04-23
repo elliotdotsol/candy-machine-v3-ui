@@ -14,6 +14,15 @@ import styled from "styled-components";
 import { GatewayProvider } from "@civic/solana-gateway-react";
 import { defaultGuardGroup, network } from "./config";
 
+import { collectionImageURL } from "./config";
+import { collectionTitle } from "./config";
+import { collectionDescription } from "./config";
+
+import { tokenType } from "./config";
+import { websiteURL } from "./config";
+import { twitterURL } from "./config";
+import { discordURL } from "./config";
+
 import { MultiMintButton } from "./MultiMintButton";
 //import { MintButton } from "./MintButton";
 import {
@@ -94,7 +103,8 @@ const Other = styled.div`
 const ImageWrap = styled.div`
   aspect-ratio: 1 / 1;
   width: 100%;
-  background-image: url(https://images.pexels.com/photos/2832432/pexels-photo-2832432.png);
+  background-image: url(${ collectionImageURL });
+  background-size: cover;
   border-radius: 16px;
 `
 const Image = styled.div`
@@ -513,7 +523,7 @@ const Home = (props: HomeProps) => {
 
   let candyPrice = null;
    if (prices.payment.filter(({kind}) => kind === "token").reduce((a, { kind }) => a + kind, "")) {
-    candyPrice = `${tokenCost} Token`
+    candyPrice = `${tokenCost} ${tokenType}`
   } else if (prices.payment.filter(({kind}) => kind === "sol").reduce((a, { price }) => a + price, 0)) {
     candyPrice = `◎ ${solCost}`
   } else {
@@ -598,7 +608,7 @@ const Home = (props: HomeProps) => {
             </Column>
             <Column>
               <Content>
-                <CollectionName>Collection Name</CollectionName>
+                <CollectionName>{collectionTitle}</CollectionName>
                 <InfoRow>
                 {guardStates.isStarted && wallet.publicKey && (
                   <InfoBox>
@@ -612,12 +622,12 @@ const Home = (props: HomeProps) => {
                   </InfoBox>
                 )}
                   <IconRow>
-                    <a href="#" target="_blank" rel="noopener noreferrer"><Globe></Globe></a>
-                    <a href="#" target="_blank" rel="noopener noreferrer"><Twitter></Twitter></a>
-                    <a href="#" target="_blank" rel="noopener noreferrer"><Discord></Discord></a>
+                    <a href={websiteURL} target="_blank" rel="noopener noreferrer"><Globe></Globe></a>
+                    <a href={twitterURL} target="_blank" rel="noopener noreferrer"><Twitter></Twitter></a>
+                    <a href={discordURL} target="_blank" rel="noopener noreferrer"><Discord></Discord></a>
                   </IconRow>
                 </InfoRow>
-                <CollectionDescription>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</CollectionDescription>
+                <CollectionDescription>{collectionDescription}</CollectionDescription>
               </Content>
               <Other>
                 {!guardStates.isStarted ? (

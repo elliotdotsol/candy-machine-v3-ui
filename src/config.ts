@@ -26,3 +26,24 @@ export const whitelistedWallets = [
   "D8ivzpXkG66VknRdVjEF1HjqS3T1tzcqraVR6FYaeLsV",
   "sTAKERL4U8fbn2nUte6rPVdcrz2z3fEh1adQEDrGULr",
 ];
+
+export const collectionImageURL =
+  process.env.NEXT_PUBLIC_COLLECTION_IMAGE_URL || "https://images.pexels.com/photos/2832432/pexels-photo-2832432.png";
+
+export const collectionTitle =
+  process.env.NEXT_PUBLIC_COLLECTION_TITLE || "Collection Name";
+
+export const collectionDescription =
+  process.env.NEXT_PUBLIC_COLLECTION_DESCRIPTION || "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.";
+
+export const tokenType =
+  process.env.NEXT_PUBLIC_TOKEN_TYPE || "Token";
+
+export const websiteURL =
+  process.env.NEXT_PUBLIC_WEBSITE_URL || "#";
+
+export const twitterURL =
+  process.env.NEXT_PUBLIC_TWITTER_URL || "#";
+
+export const discordURL =
+  process.env.NEXT_PUBLIC_DISCORD_URL || "#";

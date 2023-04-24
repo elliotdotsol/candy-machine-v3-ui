@@ -54,6 +54,34 @@ NEXT_PUBLIC_RPC_HOST=networkURL
 ```
 NEXT_PUBLIC_CANDY_MACHINE_ID=candyMachineID
 ```
+```
+optional: NEXT_PUBLIC_COLLECTION_IMAGE_URL=https://linktoyourcollectionimage.zyx
+If left blank or undefined it will default to the example image
+```
+```
+optional: NEXT_PUBLIC_COLLECTION_TITLE='Your Collection title'
+If left blank or undefined it will default to the example title
+```
+```
+optional: NEXT_PUBLIC_COLLECTION_DESCRIPTION='Your Description for the Collection.'
+If left blank or undefined it will default to the example description
+```
+```
+optional: NEXT_PUBLIC_TOKEN_TYPE='If needed, your accepted SPL token label, like e.g. USDC'
+If left blank or undefined it will default to "Token"
+```
+```
+optional: NEXT_PUBLIC_WEBSITE_URL=https://linktoyourwebsite.com
+If left blank or undefined it will default to "#"
+```
+```
+optional: NEXT_PUBLIC_TWITTER_URL=https://twitter.com/yourproject
+If left blank or undefined it will default to "#"
+```
+```
+optional: NEXT_PUBLIC_DISCORD_URL=https://discord.com/yourdiscordserver
+If left blank or undefined it will default to "#"
+```
 *If on Vercel or a similar host you need to add these as environmental variables in your project settings.*
 
 ### Quick customization

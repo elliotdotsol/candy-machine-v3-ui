@@ -53,7 +53,6 @@ export const Column = styled('div')<any>`
   }
 `;
 export const MintCount = styled('h3')`
-  font-family: 'Plus Jakarta Sans';
   font-style: normal;
   font-weight: 600;
   font-size: 20px;

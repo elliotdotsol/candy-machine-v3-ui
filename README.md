@@ -8,11 +8,6 @@ Major features of the CMv3 such as Candy Guards are implemented & auto-detected.
 
 Preview it live [here](https://wearekite-cmv3-ui.vercel.app/).
 
-### Deploy with Vercel *(recommended)*
-Vercel is great to host your Candy Machine on, deploy it instantly by clicking the button below.
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwearekite%2Fcandy-machine-v3-ui&env=NEXT_PUBLIC_SOLANA_NETWORK,NEXT_PUBLIC_RPC_HOST,NEXT_PUBLIC_CANDY_MACHINE_ID&project-name=my-kite-cmv3&repository-name=my-kite-cmv3)
-
 ### Implemented features
 - [x] Responsive UI
 - [x] Single Mint UI

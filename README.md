@@ -11,7 +11,7 @@ Preview it live [here](https://wearekite-cmv3-ui.vercel.app/).
 ### Deploy with Vercel *(recommended)*
 Vercel is great to host your Candy Machine on, deploy it instantly by clicking the button below.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwearekite%2Fcandy-machine-v3-ui&env=NEXT_PUBLIC_SOLANA_NETWORK,NEXT_PUBLIC_RPC_HOST,NEXT_PUBLIC_CANDY_MACHINE_ID&project-name=my-kite-cmv3&repository-name=my-kite-cmv3)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwearekite%2Fcandy-machine-v3-ui&env=NEXT_PUBLIC_SOLANA_NETWORK,NEXT_PUBLIC_RPC_HOST,NEXT_PUBLIC_CANDY_MACHINE_ID,NEXT_PUBLIC_COLLECTION_IMAGE_URL,NEXT_PUBLIC_COLLECTION_TITLE,NEXT_PUBLIC_COLLECTION_DESCRIPTION,NEXT_PUBLIC_TOKEN_TYPE,NEXT_PUBLIC_WEBSITE_URL,NEXT_PUBLIC_TWITTER_URL,NEXT_PUBLIC_DISCORD_URL&envDescription=For%20documentation%20about%20the%20ENV%20usage%2C%20click%20the%20link%20below&envLink=https%3A%2F%2Fgithub.com%2Fwearekite%2Fcandy-machine-v3-ui%23env-variables&project-name=my-kite-cmv3&repository-name=my-kite-cmv3&demo-title=Candy%20Machine%20UI%20for%20CMv3&demo-description=An%20all-in-one%2C%20production-ready%20candy%20machine%20v3%20UI%20with%20easy%20customization.&demo-url=https%3A%2F%2Fwearekite-cmv3-ui.vercel.app%2F&demo-image=https%3A%2F%2Fcamo.githubusercontent.com%2F0e9d50b8c682fa584d11a6edd89189f7a081e99d9cb4a284207d0bd927a31f73%2F68747470733a2f2f63646e2e646973636f72646170702e636f6d2f6174746163686d656e74732f313033393634383032323531363231353931392f313037323137303239383339383437343235302f636d76332e706e67)
 
 ### Implemented features
 - [x] Responsive UI

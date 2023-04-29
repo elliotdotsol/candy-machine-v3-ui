@@ -2,6 +2,8 @@
 Hi! This is a production ready **Candy Machine V3** responsive UI which can be easily customized.
 Major features of the CMv3 such as Candy Guards are implemented & auto-detected.
 
+To deploy a Candy Machine using Sugar, be sure to use the **correct** version. The latest as of updating this readME (29/04/2023) that supports CMv3 & this UI is [sugar v2.0.0-beta.2](https://github.com/metaplex-foundation/sugar/releases/tag/v2.0.0-beta.2). 
+
 ### Preview
 ![Desktop preview of Candy Machine V3](https://cdn.discordapp.com/attachments/1039648022516215919/1072170298398474250/cmv3.png)
 — Desktop preview.

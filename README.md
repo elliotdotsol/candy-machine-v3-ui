@@ -2,7 +2,8 @@
 Hi! This is a production ready **Candy Machine V3** responsive UI which can be easily customized.
 Major features of the CMv3 such as Candy Guards are implemented & auto-detected.
 
-To deploy a Candy Machine using Sugar, be sure to use the version that creates account version v1 Candy Machines. The latest sugar version as of updating this readME (29/04/2023) that supports account version 1 CMs, so this UI is [sugar v2.0.0-beta.2](https://github.com/metaplex-foundation/sugar/releases/tag/v2.0.0-beta.2).
+#### IMPORTANT: Use of Sugar CLI with this UI
+To deploy a Candy Machine using Sugar, be sure to use the version that creates account version v1 Candy Machines. The latest sugar version as of updating this readME (29/04/2023) that supports account version 1 CMs, and this UI is [sugar v2.0.0-beta.2](https://github.com/metaplex-foundation/sugar/releases/tag/v2.0.0-beta.2).
 
 Will look into adding functionality for CMv3 Account version v2 (which supports pNFT, royalty enforcement).
 

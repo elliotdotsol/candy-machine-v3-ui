@@ -371,7 +371,7 @@ export const parseGuardStates = ({
         : 10;
     states.isLimitReached = !canPayFor;
     if (!canPayFor)
-      states.messages.push("Mint limit for each user has reached.");
+      states.messages.push("Mint limit for each user has been reached.");
     states.canPayFor = Math.min(states.canPayFor, canPayFor);
   }
 
@@ -382,7 +382,7 @@ export const parseGuardStates = ({
       0
     );
     states.isLimitReached = !canPayFor;
-    if (!canPayFor) states.messages.push("Readeem limit has reached.");
+    if (!canPayFor) states.messages.push("Redeem limit has been reached.");
     states.canPayFor = Math.min(states.canPayFor, canPayFor);
   }
 
@@ -391,7 +391,7 @@ export const parseGuardStates = ({
     let canPayFor = Math.floor(
       balance / (guards.payment?.sol.amount + 0.012 * LAMPORTS_PER_SOL)
     );
-    if (!canPayFor) states.messages.push("Don't have enough sol to pay");
+    if (!canPayFor) states.messages.push("Not enough SOL to mint.");
     states.canPayFor = Math.min(states.canPayFor, canPayFor);
   }
 
@@ -428,7 +428,7 @@ export const parseGuardStates = ({
 
     if (!canPayFor)
       states.messages.push(
-        `Don't have enough ${guards.burn?.token.symbol || "token"} to burn.`
+        `Not enough ${guards.burn?.token.symbol || "token"} to burn.`
       );
 
     states.canPayFor = Math.min(states.canPayFor, canPayFor);
@@ -436,7 +436,7 @@ export const parseGuardStates = ({
 
   if (guards.burn?.nfts) {
     let canPayFor = guards.burn?.nfts.length || 0;
-    if (!canPayFor) states.messages.push(`Don't have enough nfts to burn.`);
+    if (!canPayFor) states.messages.push(`Not enough of or no NFTs to burn.`);
 
     states.canPayFor = Math.min(states.canPayFor, canPayFor);
   }
@@ -460,7 +460,7 @@ export const parseGuardStates = ({
   if (guards.gate?.nfts) {
     let canPayFor = guards.burn?.nfts.length ? 10 : 0;
     if (!canPayFor)
-      states.messages.push(`Don't have enough nfts to pass gate.`);
+      states.messages.push(`Not enough of or no NFTs to pass the gate.`);
     states.canPayFor = Math.min(states.canPayFor, canPayFor);
   }
 
@@ -470,7 +470,7 @@ export const parseGuardStates = ({
       x.equals(walletAddress)
     );
     if (!states.isWalletWhitelisted)
-      states.messages.push(`Not allowed to mint.`);
+      states.messages.push(`Not whitelisted for this mint.`);
   }
 
   if (guards.gatekeeperNetwork) {

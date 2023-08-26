@@ -36,6 +36,15 @@ import {
   parseGuardGroup,
   parseGuardStates,
 } from "./utils";
+import { createUmi } from "@metaplex-foundation/umi-bundle-defaults";
+import { walletAdapterIdentity as walletAdapterIdentity2} from '@metaplex-foundation/umi-signer-wallet-adapters';
+import {  mintV2, mplCandyMachine, fetchCandyMachine as fetchCandyMachine2, fetchCandyGuard} from "@metaplex-foundation/mpl-candy-machine";
+import { generateSigner, publicKey, some, transactionBuilder } from "@metaplex-foundation/umi";
+import { setComputeUnitLimit ,createMintWithAssociatedToken,
+  findAssociatedTokenPda
+  
+  } from "@metaplex-foundation/mpl-toolbox";
+
 
 export default function useCandyMachineV3(
   candyMachineId: PublicKey | string,
@@ -110,7 +119,7 @@ export default function useCandyMachineV3(
       );
     const verifyProof = (
       merkleRoot: Uint8Array | string,
-      label = "default"
+      label = "early"
     ) => {
       let merkle = merkles[label];
       if (!merkle) return;
@@ -157,6 +166,53 @@ export default function useCandyMachineV3(
         nftGuards?: NftPaymentMintSettings[];
       } = {}
     ) => {
+
+
+
+
+//@ts-ignore
+const umi =createUmi(connection.rpcEndpoint)
+// const umi = createUmi("https://api.devnet.solana.com")
+.use(walletAdapterIdentity2(wallet))
+.use(mplCandyMachine());
+const candyMachinePublicKey = publicKey("5B1rkfFNoqPEufZzQ5woDYDFfANragpJ22Zi2UnvkC4J");
+const candyMachine_ = await fetchCandyMachine2(umi,candyMachinePublicKey);
+const candyGuard = await fetchCandyGuard(umi, candyMachine_.mintAuthority);
+const nftMint = generateSigner(umi);
+
+const tx  =await transactionBuilder()
+  .add(setComputeUnitLimit(umi, { units: 800_000 }))
+  // .add(createMintWithAssociatedToken(umi, { mint: buyer, owner: buyer.publicKey }))
+  .add(
+    mintV2(umi, {
+      candyMachine: candyMachine_.publicKey,      
+      nftMint,      
+      collectionMint: candyMachine_.collectionMint,      
+      collectionUpdateAuthority:candyMachine_.authority,      
+      candyGuard: candyGuard.publicKey,          
+      group:candyGuard.groups[0].label,    
+      mintArgs: {
+        mintLimit: some({ id: 1 }),
+        //@ts-ignore
+        solPayment: some({   destination: candyGuard.groups[0].guards.solPayment.value.destination.toString() }),
+        
+        // botTax:some({ lamports: sol(0), lastInstruction: true }),
+        
+    }
+  }
+    )
+  )
+  .sendAndConfirm(umi)
+
+
+
+
+
+
+console.log(connection.rpcEndpoint,"asas");
+
+
+      return
       if (!guardsAndGroups[opts.groupLabel || "default"])
         throw new Error("Unknown guard group label");
 
@@ -386,9 +442,9 @@ export default function useCandyMachineV3(
     // };
     return Object.entries(guardsAndGroups).reduce(
       (groupPayments, [label, guards]) => {
-        // console.log(label, guards);
+        console.log(label, guards);
         return Object.assign(groupPayments, {
-          [label]: guardToPaymentUtil(guards),
+          ["early"]: guardToPaymentUtil(guards),
         });
       },
       {}

@@ -347,7 +347,7 @@ const candyMachinOps = {
   allowLists: [
     {
       list: require("../cmv3-demo-initialization/allowlist.json"),
-      groupLabel: "waoed",
+      groupLabel: "early",
     },
   ],
 };
@@ -369,7 +369,7 @@ const Home = (props: HomeProps) => {
   });
 
   const { guardLabel, guards, guardStates, prices } = useMemo(() => {
-    const guardLabel = defaultGuardGroup;
+    const guardLabel = "early";
     return {
       guardLabel,
       guards:
@@ -457,7 +457,8 @@ const Home = (props: HomeProps) => {
           };
         });
 
-      console.log({ nftGuards });
+        
+      // console.log({ nftGuards });
       // debugger;
       candyMachineV3
         .mint(quantityString, {

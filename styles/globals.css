@@ -1,10 +1,10 @@
 /* Need to change colors? Do it here, these are the main colors that are used all over the website */
 :root {
-  --main-background-color: #0E0E0E;
-  --alt-background-color: #202020;
+  --main-background-color: #1f1387;
+  --alt-background-color: #a3c3c3;
   --white: #fff;
   --black: #000;
-  --primary: #4E44CE;
+  --primary: #ce44b5;
   --error: #D92D20;
 }
 

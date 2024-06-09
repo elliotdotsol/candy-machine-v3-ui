@@ -62,7 +62,7 @@ export default function useCandyMachineV3(
   const [nftHoldings, setNftHoldings] = React.useState<Metadata[]>([]);
 
   const tokenHoldings = React.useMemo<Token[]>(() => {
-    if (!nftHoldings?.length || !allTokens?.length) return [];
+    if (!nftHoldings || !allTokens?.length) return [];
     return allTokens.filter(
       (x) => !nftHoldings.find((y) => x.mint.equals(y.address))
     );
